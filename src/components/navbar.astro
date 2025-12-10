@@ -1,0 +1,43 @@
+---
+interface Props {
+  logo?: string;
+}
+const { logo = "Nahun Saldaña Macedo." } = Astro.props;
+---
+
+<header class="header">
+  <a href="/" class="logo">{logo}</a>
+  
+
+  <!-- Burger -->
+  <button class="menu-btn" id="burger">☰</button>
+
+  <!-- Menú full screen -->
+  <div class="fullscreen-menu" id="fullscreenMenu">
+    <button class="close-btn" id="closeMenu">×</button>
+    <nav>
+      <ul>
+        
+        <li><a href="/about">SOBRE MI</a></li>
+        <li><a href="/projects">PROYECTOS</a></li>
+        <li><a href="/jardindigital">JARDIN DIGITAL</a></li>
+        <li><a href="/contact">CONTACTO</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const burger = document.getElementById('burger');
+  const fullscreenMenu = document.getElementById('fullscreenMenu');
+  const closeBtn = document.getElementById('closeMenu');
+
+  burger?.addEventListener('click', () => {
+    fullscreenMenu?.classList.add('open');
+  });
+
+  closeBtn?.addEventListener('click', () => {
+    fullscreenMenu?.classList.remove('open');
+  });
+</script>
+

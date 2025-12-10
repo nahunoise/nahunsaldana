@@ -1,11 +1,27 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/navbar.astro";
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Inicio">
+  <div class="container">
+  <Navbar />
+    <main class="hero">
+      <h1>
+        Transformo ideas complejas en proyectos viables <br />
+        con impacto positivo en la naturaleza que generen <br />
+        una mejor relación con la naturaleza
+      </h1>
+
+      <h2>
+        Diseño productos, servicios y organizaciones donde la tecnología,
+        el negocio y la naturaleza trabajan juntos.
+      </h2>
+
+      
+
+      <button class="btn btn-primary">EXPLORAR CON VOZ</button>
+      <button class="btn btn-secondary">VER PROYECTOS</button>
+    </main>
+  </div>
 </Layout>
