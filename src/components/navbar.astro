@@ -2,11 +2,11 @@
 interface Props {
   logo?: string;
 }
-const { logo = "Nahun Saldaña Macedo." } = Astro.props;
+const { logo = "/logo.svg" } = Astro.props;
 ---
 
 <header class="header">
-  <a href="/" class="logo">{logo}</a>
+  <a href="/" class="logo"> <img src={logo} alt="Logo" /></a>
   
 
   <!-- Burger -->
