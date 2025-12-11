@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/navbar.astro";
 import Footer from "../components/footer.astro";
+
 ---
 
 <Layout title="Inicio">
@@ -22,12 +23,25 @@ import Footer from "../components/footer.astro";
       </h2>
 
       
-      
-<div class="hero-buttons">
- <button class="btn btn-primary" onclick="window.vapi.chat.open()">EXPLORAR CON VOZ VAPI</button>
-  
- <a href="/projects" class = "btn btn-secondary">VER PROYECTOS</a>
+<!-- Widget normal de Vapi -->
+      <script 
+        src="https://unpkg.com/@vapi-ai/client-sdk-react/dist/embed/widget.umd.js" 
+        async 
+        type="text/javascript"
+      ></script>
 
+      <vapi-widget
+        public-key="9c013bc3-c3cc-4d35-8daa-a84c50e43f1e"
+        assistant-id="5725b18b-a802-40f0-8433-67ec6aca0ecf"
+        mode="voice"
+        theme="light"
+        position="bottom-right"
+        size="full"
+        start-button-text="Chat AI"
+      ></vapi-widget>
+<div class="hero-buttons">
+
+  <a href="/projects" class="btn btn-secondary">VER PROYECTOS</a>
 </div>
 
     <Footer />  
