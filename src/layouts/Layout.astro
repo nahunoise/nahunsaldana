@@ -13,13 +13,20 @@ const { title = "" } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
+	 <!-- Open Graph -->
+  <meta property="og:title" content="Nahun Saldaña Macedo" />
+  <meta property="og:description" content="Transformando ideas en proyectos de impacto" />
+  <meta property="og:image" content="https://nahunsaldana.com/nahun_foto.png" />
+  <meta property="og:url" content="https://nahunsaldana.com" />
+  <meta property="og:type" content="website" />
+
     <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600&family=Playfair+Display:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
 
-    <title>{title ? `${title} — Mi sitio` : "Nahun Saldaña Macedo"}</title>
+    <title>{title ? `${title} — Nahun Saldaña Macedo` : "Nahun Saldaña Macedo - Portafolio"}</title>
 
     <!-- CSS GLOBAL -->
     <style is:global>
