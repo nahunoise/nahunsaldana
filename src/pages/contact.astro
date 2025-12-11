@@ -1,0 +1,59 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/navbar.astro";
+
+---
+
+
+<Layout title="Inicio" bgClass="bg-special">
+  <div class="container">
+    <Navbar />
+    <main class="hero">
+      <h3>
+        Hola! Estoy emocionado de conectar contigo. <br></br>
+        Ya sea que tengas una idea, un proyecto o simplemente quieras charlar sobre tecnología, diseño
+        y sostenibilidad, estoy aquí para escucharte. <br></br>
+        No dudes en enviarme un mensaje a través del formulario o contactarme directamente por correo
+        electrónico. nahun.saldana.macedo@gmail.com <br></br>
+        ¡Espero saber de ti pronto!
+
+
+      </h3>
+
+      <style>
+  .form-wrapper {
+    max-width: 500px;      /* controla el ancho */
+    margin: 0 auto;        /* lo centra */
+    padding: 1rem;
+  }
+
+  form {
+    display: grid;
+    gap: 1rem;
+  }
+</style>
+
+<div class="form-wrapper">
+<form
+  action="https://formspree.io/f/xjknaqpv"
+  method="POST"
+>
+ <input type="hidden" name="https://nahunsaldana.com/" value="https://nahunsaldana.com/" />
+
+  <label style="display: flex; flex-direction: column; gap: 0.5rem;">
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label style="display: flex; flex-direction: column; gap: 0.5rem;">
+    Your message:
+    <textarea style="display: flex; flex-direction: column; gap: 0.5rem;" name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button class="btn btn-primary" type="submit">Enviar</button>
+</form>
+
+      
+
+     
+    </main>
+  </div>
