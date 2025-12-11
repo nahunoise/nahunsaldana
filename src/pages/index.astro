@@ -22,13 +22,16 @@ import Footer from "../components/footer.astro";
       </h2>
 
       
-<div class="hero-buttons">
-  <button class="btn btn-primary">EXPLORAR CON VOZ</button>
- <a href="/projects" class="btn btn-secondary">VER PROYECTOS</a>
-</div>
       
-    </main>
+<div class="hero-buttons">
+ <button class="btn btn-primary" onclick="window.vapi.chat.open()">EXPLORAR CON VOZ</button>
+  
+ <a href="/projects" class = "btn btn-secondary">VER PROYECTOS</a>
+
+</div>
+
     <Footer />  
+
   </div>
   
 </Layout>
