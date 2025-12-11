@@ -1,0 +1,58 @@
+<footer class="footer">
+
+  <div class="social-links">
+    <a href="https://www.linkedin.com/in/nahun/" target="_blank" aria-label="LinkedIn">
+      <img src="/linkedin.svg" alt="LinkedIn" />
+    </a>
+    <a href="https://www.instagram.com/nahun.saldana/" target="_blank" aria-label="Instagram">
+      <img src="/instagram.svg" alt="Instagram" />
+    </a>
+    <a href="https://www.youtube.com/@nahun.saldana" target="_blank" aria-label="YouTube">
+      <img src="/youtube.svg" alt="YouTube" />
+    </a>
+    <a href="https://substack.com/@nahunsaldana?" target="_blank" aria-label="Substack">
+      <img src="/substack.svg" alt="Substack" />
+    </a>
+  </div>
+</footer>
+
+<style is:global>
+  .footer {
+  display: flex;
+  flex-direction: column; /* apilar p + links */
+  align-items: center;    /* centrar horizontalmente */
+  justify-content: center;/* opcional, centra vertical si el footer tiene altura */
+  text-align: center;
+  padding: 40px 20px;
+  border-top: 1px solid #c5eeb9;
+ 
+  color: var(--color-foreground);
+  font-family: "Barlow", sans-serif;
+}
+
+.footer p {
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center; /* centrar los iconos horizontalmente */
+  gap: 20px;
+  flex-wrap: wrap;        /* que bajen en mobile si no caben */
+}
+
+.social-links a img {
+  width: 12px;
+  height: 12px;
+  transition: transform 0.2s ease, filter 0.2s ease;
+  filter: grayscale(0.8);
+}
+
+.social-links a:hover img {
+  transform: scale(1.1);
+  filter: grayscale(0);
+}
+
+</style>

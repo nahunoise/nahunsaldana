@@ -110,6 +110,7 @@ const { title = "" } = Astro.props;
         background: none;
         border: none;
         cursor: pointer;
+		color: #002C14;
       }
 
       /* -------------------- HERO -------------------- */
@@ -188,7 +189,7 @@ const { title = "" } = Astro.props;
         font-size: 36px;
         background: none;
         border: none;
-        color: white;
+         color: #002C14; /* cambia a tu color deseado */
         cursor: pointer;
       }
 
@@ -238,11 +239,22 @@ const { title = "" } = Astro.props;
     font-size: 16px;
     text-align: center; /* aseguramos que quede centrado */
   }
+/* Mobile */
 .hero-foto {
-  width: 250px;
+  display: block;
+  width: 50px;       /* tamaño fijo deseado en mobile */
+  max-width: 100%;    /* no se pase del contenedor */
   height: auto;
-  display: block;      /* permite centrar */
-  margin: 0 auto 10px; /* centro horizontal + separación abajo */
+  margin: 0 auto 10px;
+}
+
+/* Desktop */
+@media (min-width: 900px) {
+  .hero-foto {
+    width: 250px;     /* tamaño fijo en desktop */
+    height: auto;
+    margin: 0 auto 10px;
+  }
 }
 
         .fullscreen-menu {
