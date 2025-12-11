@@ -3,8 +3,10 @@ import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/navbar.astro";
 ---
 <Layout title="Inicio" bgClass="bg-special">
+   <Navbar />
   <div class="container">
-    <Navbar />
+   
+    <slot />
     <main class="hero">
        <img src="/nahun_foto.png" alt="Foto" class="hero-foto" />
       <h3>
