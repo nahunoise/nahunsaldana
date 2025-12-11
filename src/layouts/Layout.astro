@@ -72,38 +72,17 @@ const { title = "" } = Astro.props;
       }
 
       /* -------------------- HEADER / NAVBAR -------------------- */
-      .header {
-        display: flex;
-        justify-content: space-between; /* espacio entre logo y menú */
-        align-items: center;            /* centrado vertical */
-        gap: 12px;
-       
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        flex-wrap: wrap;
-      }
+.header {
+  display: flex;
+  justify-content: space-between; /* logo izquierda, burger derecha */
+  align-items: center;
+  gap: 12px; /* opcional */
+}
 
-	  .header-wrapper {
-  max-width: 1200px;  
-  padding: 0 20px;    
-  margin: 0 auto;     
-}
-.logo-img {
-  display: block;       /* permite usar margin auto */
-  max-width: 150px;     /* ajusta al tamaño que necesites */
-  height: auto;
-  margin: 0;            /* se alinea con padding del wrapper */
-}
- .logo {
-  font-size: 20px;
-  font-weight: 600;
-  white-space: nowrap;
-  text-decoration: none;
-  color: var(--color-foreground);
-  display: block;       /* permite centrar si es bloque */
-  text-align: center;   /* centra el texto dentro del <a> */
-  margin: 0 auto;       /* centra el bloque en el header */
+.logo {
+  display: block;
+  text-align: left;  /* opcional */
+  margin: 0;         /* elimina centrado automático */
 }
 
       .menu-btn {
@@ -113,7 +92,20 @@ const { title = "" } = Astro.props;
         cursor: pointer;
 		color: #002C14;
       }
+@media (min-width: 900px) {
+  .header {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    gap: 20px;
+  }
 
+  .logo {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
       /* -------------------- HERO -------------------- */
      .hero {
   display: flex;
@@ -238,7 +230,7 @@ const { title = "" } = Astro.props;
 
   .logo {
     font-size: 16px;
-    text-align: center; /* aseguramos que quede centrado */
+    text-align: left; /* aseguramos que quede centrado */
   }
 /* Mobile */
 .hero-foto {
