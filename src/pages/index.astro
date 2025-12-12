@@ -9,20 +9,26 @@ import Footer from "../components/footer.astro";
    <Navbar />
   <div class="container">
  
+
  
     <main class="hero">
+     <br></br>
+       <br></br>
+       
       <h1>
-        Transformo ideas complejas en proyectos viables <br />
-        con impacto positivo en la naturaleza y las comunidades <br />
+        Transformo ideas complejas en proyectos viables 
+        con impacto positivo en la naturaleza y las comunidades 
         
       </h1>
 
+   
       <h2>
-        Diseño, desarrollo y lanzo productos, servicios y organizaciones donde la tecnología,
+        Diseño, desarrollo y lanzo productos, servicios y organizaciones <br>donde la tecnología,
         el negocio y la naturaleza trabajan juntos.
       </h2>
 
       
+  
 <!-- Widget normal de Vapi -->
       <script 
         src="https://unpkg.com/@vapi-ai/client-sdk-react/dist/embed/widget.umd.js" 
@@ -34,18 +40,20 @@ import Footer from "../components/footer.astro";
         public-key="9c013bc3-c3cc-4d35-8daa-a84c50e43f1e"
         assistant-id="5725b18b-a802-40f0-8433-67ec6aca0ecf"
         mode="voice"
-        theme="light"
+        theme="dark"
         position="bottom-right"
-        size="full"
+        size="compact"
         start-button-text="Chat AI"
       ></vapi-widget>
 <div class="hero-buttons">
 
   <a href="/projects" class="btn btn-secondary">VER PROYECTOS</a>
 </div>
-
-    <Footer />  
-
-  </div>
+   
   
+   
+</main>
+
+  
+  <Footer />
 </Layout>
