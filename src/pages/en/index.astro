@@ -1,0 +1,46 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/navbar.astro";
+import Footer from "../../components/footer.astro";
+---
+
+<Layout title="Home">
+  <Navbar />
+  <div class="container">
+    <main class="hero">
+      <br />
+      <br />
+      
+      <h1>
+        I transform complex ideas into viable projects 
+        with a positive impact on nature and communities
+      </h1>
+
+      <h2>
+        I design, develop, and launch products, services, and organizations <br> 
+        where technology, business, and nature work together.
+      </h2>
+
+      <script 
+        src="https://unpkg.com/@vapi-ai/client-sdk-react/dist/embed/widget.umd.js" 
+        async 
+        type="text/javascript"
+      ></script>
+
+      <vapi-widget
+        public-key="9c013bc3-c3cc-4d35-8daa-a84c50e43f1e"
+        assistant-id="5725b18b-a802-40f0-8433-67ec6aca0ecf"
+        mode="voice"
+        theme="dark"
+        position="bottom-right"
+        size="compact"
+        start-button-text="AI Chat"
+      ></vapi-widget>
+
+      <div class="hero-buttons">
+        <a href="/en/projects" class="btn btn-secondary">VIEW PROJECTS</a>
+      </div>
+    </main>
+  </div>
+  <Footer />
+</Layout>

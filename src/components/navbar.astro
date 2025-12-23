@@ -2,26 +2,66 @@
 interface Props {
   logo?: string;
 }
+
 const { logo = "/logo.svg" } = Astro.props;
+
+// 1. Detectamos el idioma actual
+const lang = Astro.currentLocale || 'es';
+
+// 2. Definimos los textos y rutas para cada idioma
+const menu = {
+  es: {
+    about: "SOBRE MÍ",
+    projects: "PROYECTOS",
+    jardin: "JARDÍN DIGITAL",
+    contact: "CONTACTO",
+    links: {
+      home: "/",
+      about: "/about",
+      projects: "/projects",
+      jardin: "/jardindigital",
+      contact: "/contact",
+      switch: "/en/",
+      switchLabel: "EN"
+    }
+  },
+  en: {
+    about: "ABOUT ME",
+    projects: "PROJECTS",
+    jardin: "DIGITAL GARDEN",
+    contact: "CONTACT",
+    links: {
+      home: "/en/",
+      about: "/en/about",
+      projects: "/en/projects",
+      jardin: "/en/jardindigital",
+      contact: "/en/contact",
+      switch: "/",
+      switchLabel: "ES"
+    }
+  }
+};
+
+const t = menu[lang as keyof typeof menu];
 ---
 
 <header class="header">
-  <a href="/" class="logo"> <img src={logo} alt="Logo" /></a>
-  
+  <a href={t.links.home} class="logo"> <img src={logo} alt="Logo" /></a>
 
-  <!-- Burger -->
   <button class="menu-btn" id="burger">☰</button>
 
-  <!-- Menú full screen -->
   <div class="fullscreen-menu" id="fullscreenMenu">
     <button class="close-btn" id="closeMenu">×</button>
     <nav>
       <ul>
+        <li><a href={t.links.about}>{t.about}</a></li>
+        <li><a href={t.links.projects}>{t.projects}</a></li>
+        <li><a href={t.links.jardin}>{t.jardin}</a></li>
+        <li><a href={t.links.contact}>{t.contact}</a></li>
         
-        <li><a href="/about">SOBRE MI</a></li>
-        <li><a href="/projects">PROYECTOS</a></li>
-        <li><a href="/jardindigital">JARDÍN DIGITAL</a></li>
-        <li><a href="/contact">CONTACTO</a></li>
+        <li class="lang-selector">
+          <a href={t.links.switch} style="color: #0d0d0d;">{t.links.switchLabel}</a>
+        </li>
       </ul>
     </nav>
   </div>
@@ -40,4 +80,3 @@ const { logo = "/logo.svg" } = Astro.props;
     fullscreenMenu?.classList.remove('open');
   });
 </script>
-

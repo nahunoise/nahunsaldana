@@ -1,0 +1,54 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/navbar.astro";
+import Footer from "../../components/footer.astro";
+---
+<Layout title="About Me" bgClass="bg-special">
+   <Navbar />
+   
+  <div class="container">
+    <slot />
+    <img src="/nahun_foto.png" alt="Profile Photo" class="hero-foto" />
+    <main class="hero">
+       
+      <h3>
+        I have spent over a decade designing, entrepreneurship, and 
+        guiding projects in complex contexts: 
+        from startups and governments to innovation labs and 
+        international organizations. <br><br>
+        My approach combines design, technology, and 
+        experimentation to create solutions that 
+        not only work in the market but also contribute to 
+        healthier ecosystems.<br><br>
+
+        I help organizations create more sustainable and 
+        regenerative scenarios through the power of 
+        design and technology. 
+
+        I use experimentation and evidence to transform 
+        technology into services and products 
+        that promote positive habits for users. <br>
+        I manage solution metrics from end to end.<br><br> 
+        Proven ability to manage Product Managers and 
+        Agile development teams, reporting to C-level executives and Boards of Directors.<br><br>
+
+        I have developed innovation projects focused on 
+        climate change, developing economies, 
+        digital health, and education. <br><br>Additionally, I have 
+        driven several ventures and intrapreneurships within the corporate world.
+        <br><br> 
+        I co-founded Copiloto, the first purpose-driven agency in Peru; 
+        Detona, a speculative design lab; and 
+        Kreante Academy, the first NOCODE academy in Latin America, 
+        among other ventures in the worlds of sound art, 
+        education, and technology.
+      </h3>
+
+      <div class="hero-buttons">
+        <a href="/en/contact" class="btn btn-primary">CONNECT</a>
+        <a href="/en/projects" class="btn btn-secondary">VIEW PROJECTS</a>
+      </div>
+      <Footer />
+    </main>
+  </div>
+</Layout>
