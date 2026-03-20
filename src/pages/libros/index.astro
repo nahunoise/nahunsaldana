@@ -1,16 +1,105 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/navbar.astro';
+
+const libros = [
+    {
+        titulo: 'Título del Libro 1',
+        autor: 'Nombre del Autor',
+        imagen: '/images/libro-a.jpg', 
+        descripcion: 'Una breve descripción del libro que atrapa al lector.',
+        link: '/libros/libro-1'
+    },
+    {
+        titulo: 'Título del Libro 2',
+        autor: 'Nombre del Autor',
+        imagen: '/images/libro-b.jpg',
+        descripcion: 'Explorando nuevas fronteras en este volumen.',
+        link: '/libros/libro-2'
+    },
+    // Añade más libros aquí...
+];
 ---
+
 <Layout title="Mis Libros">
-  <section class="proyectos">
-    <h2>Mi Biblioteca</h2>
-    <div class="proyectos-grid">
-      <a href="/libros/mi-primer-libro" class="proyecto">
-        <div class="proyecto-texto">
-          <h3>Título del Libro</h3>
-          <p>Una breve descripción...</p>
-        </div>
-      </a>
-      </div>
-  </section>
+    <Navbar />
+    <main class="container">
+        <section class="proyectos">
+            <h1 style="text-align: center; margin-top: 40px;">Mis Libros</h1>
+            <p style="text-align: center; margin-bottom: 40px;">Explora mi biblioteca personal y publicaciones.</p>
+            
+            <div class="proyectos-grid">
+                {libros.map((libro) => (
+                    <a href={libro.link} class="proyecto">
+                        <img src={libro.imagen} alt={libro.titulo} loading="lazy" />
+                        <div class="proyecto-texto">
+                            <h3>{libro.titulo}</h3>
+                            <p>{libro.autor} — {libro.descripcion}</p>
+                        </div>
+                    </a>
+                ))}
+            </div>
+        </section>
+    </main>
 </Layout>
+
+<style>
+    /* Diseño exacto a la versión de inglés que te gustó */
+    .proyectos-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-top: 20px;
+    }
+
+    @media (min-width: 900px) {
+        .proyectos-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    .proyecto {
+        position: relative;
+        overflow: hidden;
+        border-radius: 16px;
+        display: block;
+        text-decoration: none;
+        aspect-ratio: 3 / 4;
+        background-color: rgba(0,0,0,0.05);
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .proyecto:hover {
+        transform: scale(1.02);
+    }
+
+    .proyecto img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 16px;
+    }
+
+    .proyecto-texto {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(transparent, rgba(0, 44, 20, 0.9));
+        color: white;
+        padding: 30px 20px 20px;
+        border-radius: 0 0 16px 16px;
+    }
+
+    .proyecto-texto h3 {
+        margin: 0;
+        font-size: 1.5rem;
+        color: #e9f1c6;
+    }
+
+    .proyecto-texto p {
+        margin: 5px 0 0;
+        font-size: 0.9rem;
+        opacity: 0.9;
+    }
+</style>
