@@ -1,0 +1,140 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="De la selva sus vueltas">
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>De la selva sus vueltas</h1>
+                <p>Descubre la magia de la selva a través de mis palabras</p>
+                <button class="cta-button">Comprar ahora</button>
+            </div>
+        </section>
+
+        <!-- Book Description -->
+        <section class="description">
+            <div class="container">
+                <h2>Sobre el libro</h2>
+                <p>
+                    Sumérgete en una aventura inolvidable entre la naturaleza salvaje y los secretos 
+                    que la selva guarda. Un viaje transformador narrado con poesía y profundidad.
+                </p>
+            </div>
+        </section>
+
+        <!-- Audiobook Section -->
+        <section class="audiobooks">
+            <div class="container">
+                <h2>Audiobooks disponibles</h2>
+                <div class="audiobook-grid">
+                    <div class="audiobook-card">
+                        <h3>Capítulo 1</h3>
+                        <audio controls>
+                            <source src="/audio/capitulo1.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+                    <div class="audiobook-card">
+                        <h3>Capítulo 2</h3>
+                        <audio controls>
+                            <source src="/audio/capitulo2.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta">
+            <h2>¿Listo para la aventura?</h2>
+            <button class="cta-button-secondary">Obtén tu copia hoy</button>
+        </section>
+    </main>
+</Layout>
+
+<style>
+    .hero {
+        min-height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #2d5016 0%, #1a3a0a 100%);
+        color: white;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-content p {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    .description {
+        padding: 4rem 2rem;
+        background: #f5f5f5;
+    }
+
+    .audiobooks {
+        padding: 4rem 2rem;
+    }
+
+    .audiobook-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .audiobook-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .cta {
+        text-align: center;
+        padding: 4rem 2rem;
+        background: #2d5016;
+        color: white;
+    }
+
+    .cta-button,
+    .cta-button-secondary {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    .cta-button {
+        background: #ff9800;
+        color: white;
+    }
+
+    .cta-button:hover {
+        background: #f57c00;
+    }
+
+    .cta-button-secondary {
+        background: white;
+        color: #2d5016;
+    }
+
+    .cta-button-secondary:hover {
+        background: #f0f0f0;
+    }
+</style>

@@ -1,0 +1,80 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+
+const book = {
+    title: 'The Jungle and Its Echoes',
+    author: 'Nahun Saldaña',
+    description: 'A captivating exploration of the jungle\'s mysteries and sounds.',
+    coverImage: '/images/books/thejungleanditsechoes.jpg',
+    audioUrl: '/audio/thejungleanditsechoes.mp3',
+    duration: '4:32',
+};
+---
+
+<Layout title={book.title}>
+    <main class="book-page">
+        <div class="book-header">
+            <img src={book.coverImage} alt={book.title} class="book-cover" />
+            <div class="book-info">
+                <h1>{book.title}</h1>
+                <p class="author">by {book.author}</p>
+                <p class="description">{book.description}</p>
+            </div>
+        </div>
+
+        <section class="audio-section">
+            <h2>Listen to the Audiobook</h2>
+            <audio controls class="audio-player">
+                <source src={book.audioUrl} type="audio/mpeg" />
+                Your browser does not support the audio element.
+            </audio>
+            <p class="duration">Duration: {book.duration}</p>
+        </section>
+    </main>
+</Layout>
+
+<style>
+    .book-page {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    .book-header {
+        display: grid;
+        grid-template-columns: 250px 1fr;
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .book-cover {
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .book-info h1 {
+        margin: 0 0 0.5rem 0;
+    }
+
+    .author {
+        color: #666;
+        font-style: italic;
+    }
+
+    .audio-section {
+        background: #f5f5f5;
+        padding: 2rem;
+        border-radius: 8px;
+    }
+
+    .audio-player {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .duration {
+        color: #666;
+        font-size: 0.9rem;
+    }
+</style>
