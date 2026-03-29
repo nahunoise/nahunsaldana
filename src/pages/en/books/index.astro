@@ -2,22 +2,22 @@
 import Layout from '../../../layouts/Layout.astro';
 import Navbar from '../../../components/navbar.astro';
 
-const books = [
+const libros = [
     {
-        title: 'Book Title 1',
-        author: 'Author Name',
-        image: '/images/libro-a.jpg', // Reutiliza la misma imagen del folder public
-        description: 'A brief description of the book that engages the reader.',
-        link: '/en/books/twistsofthewild' // Enlace a la página específica del libro
+        titulo: 'The Forest and its Turns',
+        autor: 'Nahun Saldaña Macedo',
+        imagen: '/images/caratula_libro_dsv_2026.jpg', 
+        descripcion: 'From an encounter with a viper that ends a childhood game, to designing technological solutions for a future in crisis, The Forest and its Turns invites us to listen to the murmur of the Huallaga river—not as an echo of the past, but as a warning and a message of hope.',
+        link: '/en/books/twistsofthewild'
     },
     {
-        title: 'Book Title 2',
-        author: 'Author Name',
-        image: '/images/libro-b.jpg',
-        description: 'Exploring new frontiers in this compelling volume.',
-        link: '/en/books/book-2'
+        titulo: 'The Sonic Weaponry of the Asháninka Army',
+        autor: 'Nahun Saldaña Macedo',
+        imagen: '/images/fanzine-1.jpg',
+        descripcion: 'A journey into one of Perus most fascinating stories of resistance. Discover how one of the country’s fiercest warrior communities used the power of sound to defend their territory and culture. A narrative that reflects on resistance and sound as a tool for struggle.',
+        link: 'https://amzn.eu/d/0aXb2XXI'
     },
-    // Add more books as needed
+    // Add more books here...
 ];
 ---
 
@@ -29,12 +29,12 @@ const books = [
             <p style="text-align: center; margin-bottom: 40px;">Explore my personal library and publications.</p>
             
             <div class="proyectos-grid">
-                {books.map((book) => (
-                    <a href={book.link} class="proyecto">
-                        <img src={book.image} alt={book.title} loading="lazy" />
+                {libros.map((libro) => (
+                    <a href={libro.link} class="proyecto">
+                        <img src={libro.imagen} alt={libro.titulo} loading="lazy" />
                         <div class="proyecto-texto">
-                            <h3>{book.title}</h3>
-                            <p>{book.author} — {book.description}</p>
+                            <h3>{libro.titulo}</h3>
+                            <p>{libro.autor} — {libro.descripcion}</p>
                         </div>
                     </a>
                 ))}
@@ -44,7 +44,7 @@ const books = [
 </Layout>
 
 <style>
-    /* Mantenemos exactamente los mismos estilos para coherencia visual */
+    /* Exact design to the version you liked */
     .proyectos-grid {
         display: grid;
         grid-template-columns: 1fr;
