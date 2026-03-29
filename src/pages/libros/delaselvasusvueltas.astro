@@ -1,140 +1,443 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import LayoutLibro from '../../layouts/LayoutLibro.astro';
 ---
 
-<Layout title="De la selva sus vueltas">
-    <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="hero-content">
-                <h1>De la selva sus vueltas</h1>
-                <p>Descubre la magia de la selva a través de mis palabras</p>
-                <button class="cta-button">Comprar ahora</button>
+<LayoutLibro title="De la selva sus vueltas — Libro por Nahun Saldaña">
+    <main class="libro-experiencia">
+        
+   <header class="hero-organic-v2">
+            <div class="hero-bg-wrapper">
+                <div class="hero-bg-anim-container">
+                    <img src="/images/A6-1.jpg" alt="Fondo Selva" class="hero-bg" id="parallax-bg" />
+                </div>
+            </div>
+            <div class="hero-gradient-overlay"></div>
+            
+            <div class="hero-content-v2">
+                <span class="badge reveal-init sans">Preventa Exclusiva: 100 Ejemplares</span>
+                <div class="titulo-container reveal-init delay-1">
+                    <img src="/images/titulo-del-libro.png" alt="De la selva sus vueltas" class="titulo-png" />
+                </div>
+                <p class="hero-sub reveal-init delay-2 serif">Un manifiesto visual y narrativo sobre el retorno al origen.</p>
+                <div class="hero-actions reveal-init delay-3">
+                    <a href="#reserva" class="btn-main sans">RESERVAR MI COPIA</a>
+                </div>
+            </div>
+        </header>
+
+        <section class="section-padding quote-section">
+            <div class="container small">
+                <span class="section-tag sans reveal">El Origen</span>
+                <blockquote class="big-quote serif reveal">
+                    "No eres una planta en una maceta para quedarte en un solo lugar sin echar raíces en la tierra."
+                </blockquote>
+                <p class="quote-author sans reveal">— Relato familiar, 1989.</p>
             </div>
         </section>
 
-        <!-- Book Description -->
-        <section class="description">
+        <section class="section-padding story-section">
             <div class="container">
-                <h2>Sobre el libro</h2>
-                <p>
-                    Sumérgete en una aventura inolvidable entre la naturaleza salvaje y los secretos 
-                    que la selva guarda. Un viaje transformador narrado con poesía y profundidad.
-                </p>
-            </div>
-        </section>
-
-        <!-- Audiobook Section -->
-        <section class="audiobooks">
-            <div class="container">
-                <h2>Audiobooks disponibles</h2>
-                <div class="audiobook-grid">
-                    <div class="audiobook-card">
-                        <h3>Capítulo 1</h3>
-                        <audio controls>
-                            <source src="/audio/capitulo1.mp3" type="audio/mpeg">
-                        </audio>
+                <div class="story-grid">
+                    <div class="story-left reveal">
+                        <h2 class="serif">Del Huallaga <br/>a la ciudad gris.</h2>
                     </div>
-                    <div class="audiobook-card">
-                        <h3>Capítulo 2</h3>
-                        <audio controls>
-                            <source src="/audio/capitulo2.mp3" type="audio/mpeg">
-                        </audio>
+                    <div class="story-right reveal">
+                        <p class="lead-text serif">A mis treinta y cinco años, me di cuenta de que lo más extraordinario no estaba en la próxima gran innovación, sino guardado en mi memoria.</p>
+                        <p><strong>De la selva sus vueltas</strong> es un destilado de olores, sonidos y crónicas recolectadas a orillas del río Huallaga. Es el puente entre el diseño contemporáneo y la sabiduría amazónica que se niega a ser olvidada.</p>
+                        <p>Este libro no es solo papel; es una pieza de colección numerada que explora la identidad, la tecnología y el territorio peruano desde una mirada personal y visceral.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- CTA Section -->
-        <section class="cta">
-            <h2>¿Listo para la aventura?</h2>
-            <button class="cta-button-secondary">Obtén tu copia hoy</button>
+        <section class="section-padding features-section">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature-card reveal">
+                        <span class="f-num sans">01</span>
+                        <h3 class="sans">Edición de Autor</h3>
+                        <p>100 ejemplares numerados, firmados y con acabados artesanales.</p>
+                    </div>
+                    <div class="feature-card reveal">
+                        <span class="f-num sans">02</span>
+                        <h3 class="sans">Narrativa Visual</h3>
+                        <p>Fotografías y texturas que capturan la esencia vibrante de la selva.</p>
+                    </div>
+                    <div class="feature-card reveal">
+                        <span class="f-num sans">03</span>
+                        <h3 class="sans">Audio Inmersivo</h3>
+                        <p>Acceso a capítulos narrados por el autor con paisajes sonoros del Huallaga.</p>
+                    </div>
+                </div>
+            </div>
         </section>
+
+      <section id="reserva" class="section-padding cta-final">
+    <div class="container small reveal">
+        <div class="cta-box">
+            <h2 class="serif">Asegura tu parte de la historia</h2>
+            <p class="sans">Envíos a Perú y Europa (Mayo 2026)</p>
+            <div class="btn-group">
+                <a href="#" class="btn-main sans">RESERVA EN PERÚ (YAPE/PLIN)</a>
+                <a href="#" class="btn-alt sans">EUROPA (GUMROAD)</a>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="footer-autor section-padding">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand reveal">
+                        <span class="sans logo-footer">Nahun Saldaña</span>
+                        <p class="serif italic">Explorando el territorio entre <br/> la selva y el diseño.</p>
+                    </div>
+                    
+                    <div class="footer-links reveal">
+                        <div class="link-group">
+                            <span class="sans label">Proyectos</span>
+                            <a href="https://www.naun.xyz/" target="_blank" class="serif">naun.xyz</a>
+                        </div>
+                        <div class="link-group">
+                            <span class="sans label">Social</span>
+                            <div class="social-row">
+                                <a href="https://www.instagram.com/nahun.saldana/" target="_blank" class="serif">Instagram</a>
+                                <a href="https://www.linkedin.com/in/nahun/" target="_blank" class="serif">LinkedIn</a>
+                            </div>
+                        </div>
+                        <div class="link-group">
+                            <span class="sans label">Contacto</span>
+                            <a href="mailto:nahun.saldana.macedo@gmail.com" class="serif">Email</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom sans">
+                    <p>© 2026 — De la selva sus vueltas. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </footer>
     </main>
-</Layout>
+</LayoutLibro>
 
 <style>
-    .hero {
-        min-height: 60vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: linear-gradient(135deg, #2d5016 0%, #1a3a0a 100%);
-        color: white;
+    /* VARIABLES Y TIPOGRAFÍA */
+    :root {
+        --c-magenta: #ff00ff;
+        --c-naranja: #e67e22;
+        --c-oro: #d4af37;
+        --font-sans: 'Jost', sans-serif;
+        --font-serif: 'Lora', serif;
+    }
+
+    .sans { font-family: var(--font-sans); text-transform: uppercase; letter-spacing: 2px; font-weight: 700; }
+    .serif { font-family: var(--font-serif); }
+
+    /* LAYOUT BASE */
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 25px; }
+    .container.small { max-width: 800px; }
+    .section-padding { padding: 120px 0; }
+    
+    /* HERO (Corrección de margen y scroll) */
+   .hero-organic-v2 { 
+        height: 100vh; 
+        position: relative; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        overflow: hidden;
+        background: #000;
+    }
+.hero-bg-wrapper { 
+        position: absolute; 
+        top: 0; 
+        left: 0; 
+        width: 100%; 
+        height: 130%; /* Altura extra para evitar bordes al scrollear */
+        z-index: 1; 
+    }   
+     .hero-bg { width: 100%; height: 100%; object-fit: cover; opacity: 0.5; }
+     .hero-bg-anim-container {
+        width: 100%;
+        height: 100%;
+        /* Animación lenta de 20 segundos que simula respiración */
+        animation: jungleBreath 20s infinite alternate ease-in-out;
+        will-change: transform, filter;
+    }
+    .hero-bg { 
+        width: 100%; 
+        height: 100%; 
+        object-fit: cover; 
+        opacity: 0.55; 
+        filter: saturate(1.2) contrast(1.1);
+        transition: transform 0.1s ease-out; /* Suaviza el paralaje */
+    }
+
+    /* KEYFRAMES DE LA ANIMACIÓN */
+    @keyframes jungleBreath {
+        0% {
+            transform: scale(1);
+            filter: saturate(1.2) brightness(1);
+        }
+        50% {
+            transform: scale(1.08); /* Zoom muy lento e inmersivo */
+            filter: saturate(1.5) brightness(1.1) hue-rotate(5deg); /* Los colores vibran sutilmente */
+        }
+        100% {
+            transform: scale(1.03);
+            filter: saturate(1.2) brightness(1);
+        }
+    }
+
+    .hero-gradient-overlay { 
+        position: absolute; 
+        bottom: 0; 
+        left: 0; 
+        width: 100%; 
+        height: 70%; 
+        background: linear-gradient(to top, #0a0a0a 15%, rgba(10, 10, 10, 0.4) 45%, transparent 100%); 
+        z-index: 2; 
+        pointer-events: none; /* Crucial para no romper el scroll */
+    }
+    .hero-gradient-overlay { 
+        position: absolute; bottom: 0; left: 0; width: 100%; height: 60%; 
+        background: linear-gradient(to top, #0a0a0a 10%, transparent); z-index: 2; pointer-events: none;
+    }
+    .hero-content-v2 { position: relative; z-index: 10; text-align: center; }
+    .titulo-png { width: 100%; max-width: 550px; height: auto; filter: drop-shadow(0 0 20px rgba(255,0,255,0.3)); }
+
+    /* TEXTOS EDITORIALES */
+    .section-tag { color: var(--c-magenta); font-size: 12px; display: block; margin-bottom: 20px; }
+    
+    .big-quote { 
+        font-size: clamp(2rem, 5vw, 3.5rem); 
+        line-height: 1.1; 
+        color: #fff; 
+        margin-bottom: 20px; 
+        font-style: italic;
+    }
+    .quote-author { opacity: 0.5; font-size: 13px; }
+
+    .story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+    .story-left h2 { font-size: 3.5rem; line-height: 1; color: var(--c-magenta); }
+    .lead-text { font-size: 1.6rem; color: #fff; margin-bottom: 30px; line-height: 1.3; }
+    .story-right p { font-size: 1.1rem; opacity: 0.8; margin-bottom: 20px; }
+
+    /* FEATURES */
+    .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; border-top: 1px solid #333; padding-top: 60px; }
+    .f-num { color: var(--c-naranja); font-size: 14px; display: block; margin-bottom: 15px; }
+    .feature-card h3 { font-size: 1.2rem; margin-bottom: 10px; }
+    .feature-card p { font-size: 0.9rem; opacity: 0.6; }
+
+    /* CTA BOX */
+    .cta-final {
+        background-color: #55AD4C; /* Tu verde selva */
+        color: #0a0a0a; /* Texto oscuro para máxima legibilidad sobre el verde */
+        padding: 150px 0; /* Un poco más de aire para el cierre */
+    }
+
+    /* Quitamos el fondo oscuro del cta-box para que respire el verde */
+    .cta-box {
         text-align: center;
-    }
-
-    .hero-content h1 {
-        font-size: 3.5rem;
-        margin-bottom: 1rem;
-    }
-
-    .hero-content p {
-        font-size: 1.3rem;
-        margin-bottom: 2rem;
-    }
-
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 2rem;
-    }
-
-    .description {
-        padding: 4rem 2rem;
-        background: #f5f5f5;
-    }
-
-    .audiobooks {
-        padding: 4rem 2rem;
-    }
-
-    .audiobook-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-        margin-top: 2rem;
-    }
-
-    .audiobook-card {
-        background: white;
-        padding: 2rem;
-        border-radius: 8px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .cta {
-        text-align: center;
-        padding: 4rem 2rem;
-        background: #2d5016;
-        color: white;
-    }
-
-    .cta-button,
-    .cta-button-secondary {
-        padding: 0.8rem 2rem;
-        font-size: 1rem;
+        background: transparent; /* Ahora el fondo es el verde de la sección */
+        padding: 0;
         border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background 0.3s;
     }
 
-    .cta-button {
-        background: #ff9800;
-        color: white;
+    .cta-box h2 {
+        font-size: clamp(2.5rem, 6vw, 4rem);
+        margin-bottom: 20px;
+        color: #000; /* Negro puro para que "golpee" visualmente */
+        line-height: 1;
     }
 
-    .cta-button:hover {
-        background: #f57c00;
+    .cta-box .sans {
+        font-size: 14px;
+        letter-spacing: 3px;
+        color: rgba(0, 0, 0, 0.7); /* Un negro suavizado para la bajada */
+        margin-bottom: 50px;
+        display: block;
     }
 
-    .cta-button-secondary {
-        background: white;
-        color: #2d5016;
+    /* BOTONES ADAPTADOS AL VERDE */
+    .btn-group {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        margin-top: 50px;
     }
 
-    .cta-button-secondary:hover {
-        background: #f0f0f0;
+    /* Botón Principal (Negro sobre el verde resalta mucho) */
+    .btn-main {
+        background: #000;
+        color: #fff;
+        padding: 20px 40px;
+        border-radius: 0;
+        text-decoration: none;
+        font-size: 13px;
+        transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+        border: 1px solid #000;
+    }
+
+    .btn-main:hover {
+        background: transparent;
+        color: #000;
+        transform: translateY(-5px);
+    }
+
+    /* Botón Alternativo (Blanco/Transparente) */
+    .btn-alt {
+        background: transparent;
+        color: #000;
+        padding: 20px 40px;
+        border: 1px solid #000;
+        text-decoration: none;
+        font-size: 13px;
+        transition: all 0.3s ease;
+    }
+
+    .btn-alt:hover {
+        background: rgba(255, 255, 255, 0.3);
+        transform: translateY(-5px);
+    }
+
+    /* Ajuste para móvil */
+    @media (max-width: 768px) {
+        .btn-group {
+            flex-direction: column;
+            width: 100%;
+            max-width: 300px;
+            margin: 40px auto 0;
+        }
+        .cta-final {
+            padding: 100px 0;
+        }
+    }
+    /* BOTONES */
+    .btn-main { background: #fff; color: #000; padding: 18px 35px; border-radius: 0; text-decoration: none; transition: 0.3s; font-size: 13px; }
+    .btn-main:hover { background: var(--c-magenta); color: #fff; }
+    .btn-alt { border: 1px solid #444; color: #fff; padding: 18px 35px; text-decoration: none; transition: 0.3s; font-size: 13px; }
+    .btn-alt:hover { border-color: #fff; }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+        .story-grid { grid-template-columns: 1fr; gap: 40px; }
+        .features-grid { grid-template-columns: 1fr; }
+        .btn-group { flex-direction: column; }
+        .section-padding { padding: 80px 0; }
+    }
+
+    .footer-autor {
+        background-color: #000;
+        border-top: 1px solid #222;
+        padding-top: 80px;
+        padding-bottom: 40px;
+    }
+
+    .footer-grid {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 60px;
+        align-items: start;
+        margin-bottom: 80px;
+    }
+
+    .logo-footer {
+        font-size: 1.5rem;
+        display: block;
+        margin-bottom: 10px;
+        color: var(white); /* Un toque de tu color de marca */
+    }
+
+    .footer-brand p {
+        opacity: 0.6;
+        font-size: 1.1rem;
+        line-height: 1.4;
+    }
+
+    .footer-links {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    .link-group .label {
+        font-size: 10px;
+        color: var(--c-naranja);
+        display: block;
+        margin-bottom: 15px;
+        opacity: 0.8;
+    }
+
+    .link-group a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.2rem;
+        transition: 0.3s;
+        display: block;
+    }
+
+    .link-group a:hover {
+        color: var(--c-magenta);
+        transform: translateX(5px);
+    }
+
+    .social-row {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .footer-bottom {
+        border-top: 1px solid #111;
+        padding-top: 30px;
+        font-size: 10px;
+        opacity: 0.4;
+        text-align: center;
+        letter-spacing: 1px;
+    }
+
+    /* RESPONSIVE FOOTER */
+    @media (max-width: 768px) {
+        .footer-grid {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+        .footer-links {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
     }
 </style>
+
+<script>
+  // JS PARALLAX MEJORADO
+    const bg = document.getElementById('parallax-bg');
+    
+    // Usamos requestAnimationFrame para máxima fluidez
+    let lastScrollY = window.pageYOffset;
+    let ticking = false;
+
+    function updateParallax() {
+        if(bg) {
+            // El paralaje ahora usa translate3d para usar la potencia de la tarjeta de video
+            bg.style.transform = `translate3d(0, ${lastScrollY * 0.35}px, 0)`;
+        }
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', () => {
+        lastScrollY = window.pageYOffset;
+        if (!ticking) {
+            window.requestAnimationFrame(updateParallax);
+            ticking = true;
+        }
+    }, { passive: true });
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) entry.target.classList.add('active');
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal, .reveal-init').forEach(el => observer.observe(el));
+</script>
