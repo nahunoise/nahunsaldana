@@ -18,9 +18,13 @@ import LayoutLibro from '../../layouts/LayoutLibro.astro';
                 <div class="titulo-container reveal-init delay-1">
                     <img src="/images/titulo-del-libro.png" alt="De la selva sus vueltas" class="titulo-png" />
                 </div>
-                <p class="hero-sub reveal-init delay-2 serif">Un manifiesto visual y narrativo sobre el retorno al origen.</p>
+                <p class="hero-sub reveal-init delay-2 serif"> De la selva sus vueltas nos invita a escuchar el murmullo del Huallaga no como un eco del pasado, 
+                    sino como una advertencia y una esperanza. 
+                    <br></br>Un testimonio sobre lo que significa afilar el machete en el siglo XXI para defender la vida en todas sus formas. 
+                    <strong>25 historias</strong> llenas de aventuras, encuentros y aprendizajes.<br></br> </p>
+</p>
                 <div class="hero-actions reveal-init delay-3">
-                    <a href="#reserva" class="btn-main sans">RESERVAR MI COPIA</a>
+                    <a href="https://forms.gle/5JKsF49Jmtxo7jPE7" class="btn-main sans">RESERVAR MI LIBRO</a>
                 </div>
             </div>
         </header>
@@ -31,7 +35,7 @@ import LayoutLibro from '../../layouts/LayoutLibro.astro';
                 <blockquote class="big-quote serif reveal">
                     "No eres una planta en una maceta para quedarte en un solo lugar sin echar raíces en la tierra."
                 </blockquote>
-                <p class="quote-author sans reveal">— Relato familiar, 1989.</p>
+                <p class="quote-author sans reveal">— Cotita Macedo Panduro, mi madre</p>
             </div>
         </section>
 
@@ -56,16 +60,16 @@ import LayoutLibro from '../../layouts/LayoutLibro.astro';
                     <div class="feature-card reveal">
                         <span class="f-num sans">01</span>
                         <h3 class="sans">Edición de Autor</h3>
-                        <p>100 ejemplares numerados, firmados y con acabados artesanales.</p>
+                        <p>100 ejemplares numerados, firmados y comentados.</p>
                     </div>
                     <div class="feature-card reveal">
                         <span class="f-num sans">02</span>
-                        <h3 class="sans">Narrativa Visual</h3>
-                        <p>Fotografías y texturas que capturan la esencia vibrante de la selva.</p>
+                        <h3 class="sans">Inmersión Sonora</h3>
+                        <p>El libro incluye una narrativa sonora que complementa las historias con paisajes sonoros del Huallaga.</p>
                     </div>
                     <div class="feature-card reveal">
                         <span class="f-num sans">03</span>
-                        <h3 class="sans">Audio Inmersivo</h3>
+                        <h3 class="sans">Narración Personal</h3>
                         <p>Acceso a capítulos narrados por el autor con paisajes sonoros del Huallaga.</p>
                     </div>
                 </div>
@@ -75,11 +79,11 @@ import LayoutLibro from '../../layouts/LayoutLibro.astro';
       <section id="reserva" class="section-padding cta-final">
     <div class="container small reveal">
         <div class="cta-box">
-            <h2 class="serif">Asegura tu parte de la historia</h2>
+            <h2 class="serif">Forma parte de la historia</h2>
             <p class="sans">Envíos a Perú y Europa (Mayo 2026)</p>
             <div class="btn-group">
-                <a href="#" class="btn-main sans">RESERVA EN PERÚ (YAPE/PLIN)</a>
-                <a href="#" class="btn-alt sans">EUROPA (GUMROAD)</a>
+            
+                <a href="https://forms.gle/5JKsF49Jmtxo7jPE7" class="btn-alt sans">RESERVAR</a>
             </div>
         </div>
     </div>
@@ -116,6 +120,18 @@ import LayoutLibro from '../../layouts/LayoutLibro.astro';
                 </div>
             </div>
         </footer>
+     <audio id="bg-sound" loop playsinline>
+    <source src="/sounds/huallaga-ambience.mp3" type="audio/mpeg" />
+</audio>
+
+<button id="sound-toggle" class="sound-control" aria-label="Controlar sonido">
+    <div class="sound-icon-wrapper">
+        <span class="bar bar-1"></span>
+        <span class="bar bar-2"></span>
+        <span class="bar bar-3"></span>
+    </div>
+    <span class="sound-text sans">AUDIO</span>
+</button>
     </main>
 </LayoutLibro>
 
@@ -202,8 +218,20 @@ import LayoutLibro from '../../layouts/LayoutLibro.astro';
         position: absolute; bottom: 0; left: 0; width: 100%; height: 60%; 
         background: linear-gradient(to top, #0a0a0a 10%, transparent); z-index: 2; pointer-events: none;
     }
-    .hero-content-v2 { position: relative; z-index: 10; text-align: center; }
-    .titulo-png { width: 100%; max-width: 550px; height: auto; filter: drop-shadow(0 0 20px rgba(255,0,255,0.3)); }
+.hero-content-v2 {
+        position: relative;
+        z-index: 10;
+        text-align: center;
+        /* Añadimos un margen interno de seguridad */
+        padding: 0 30px; 
+        max-width: 900px; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* Evita que el contenedor sea más ancho que la pantalla */
+        width: 100%; 
+        box-sizing: border-box;
+    }    .titulo-png { width: 100%; max-width: 550px; height: auto; filter: drop-shadow(0 0 20px rgba(255,0,255,0.3)); }
 
     /* TEXTOS EDITORIALES */
     .section-tag { color: var(--c-magenta); font-size: 12px; display: block; margin-bottom: 20px; }
@@ -407,6 +435,84 @@ import LayoutLibro from '../../layouts/LayoutLibro.astro';
             gap: 40px;
         }
     }
+    .badge {
+        background: var(--c-naranja);
+        color: #000; /* Negro para contraste nítido */
+        padding: 4px 12px; /* Más estrecho */
+        border-radius: 50px;
+        font-size: 9px; /* Tamaño reducido */
+        font-weight: 700;
+        letter-spacing: 2px; /* Espaciado elegante estilo Futura */
+        text-transform: uppercase;
+        display: inline-block;
+        margin-bottom: 10px; /* Espacio con el título */
+    }
+   .sound-control {
+        position: fixed;
+        bottom: 30px; /* Cambiado de 750px a 30px */
+        right: 30px;
+        z-index: 1000;
+        background: rgba(0, 0, 0, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 10px 15px;
+        border-radius: 50px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        backdrop-filter: blur(5px);
+        transition: all 0.3s ease;
+    }
+
+    .sound-control:hover {
+        background: rgba(255, 0, 255, 0.2);
+        border-color: var(--c-magenta);
+    }
+
+    .sound-text {
+        font-size: 10px;
+        color: #fff;
+        letter-spacing: 1px;
+    }
+
+    /* Animación de barras de sonido */
+    .sound-icon-wrapper {
+        display: flex;
+        align-items: flex-end;
+        gap: 2px;
+        height: 12px;
+        width: 15px;
+    }
+
+    .bar {
+        width: 2px;
+        background: #fff;
+        height: 100%;
+        transition: height 0.3s ease;
+    }
+
+    /* Estado cuando está sonando (Playing) */
+    .playing .bar {
+        animation: soundBars 0.8s infinite alternate;
+    }
+    .playing .bar-1 { animation-delay: 0.1s; }
+    .playing .bar-2 { animation-delay: 0.3s; }
+    .playing .bar-3 { animation-delay: 0.2s; }
+
+    /* Estado cuando está en silencio (Muted) */
+    .sound-control:not(.playing) .bar {
+        height: 2px !important;
+        opacity: 0.5;
+    }
+
+    @keyframes soundBars {
+        0% { height: 3px; }
+        100% { height: 100%; }
+    }
+
+    @media (max-width: 768px) {
+        .sound-control { bottom: 20px; right: 20px; padding: 8px 12px; }
+    }
 </style>
 
 <script>
@@ -440,4 +546,75 @@ import LayoutLibro from '../../layouts/LayoutLibro.astro';
     }, { threshold: 0.1 });
 
     document.querySelectorAll('.reveal, .reveal-init').forEach(el => observer.observe(el));
+
+ const audio = document.getElementById('bg-sound');
+    const soundBtn = document.getElementById('sound-toggle');
+    let hasStarted = false;
+
+    // 1. FORZAR LOOP MANUAL Y PROPIEDADES
+    if (audio) {
+        audio.loop = true;
+        audio.addEventListener('ended', function() {
+            this.currentTime = 0;
+            this.play();
+        }, false);
+    }
+
+    // 2. FUNCIÓN MAESTRA DE REPRODUCCIÓN
+    const activarSonidoGlobal = () => {
+        if (hasStarted || !audio) return;
+
+        audio.volume = 0;
+        const playPromise = audio.play();
+
+        if (playPromise !== undefined) {
+            playPromise.then(() => {
+                hasStarted = true;
+                soundBtn.classList.add('playing');
+                
+                // Fade in suave para que no asuste
+                let vol = 0;
+                const fadeIn = setInterval(() => {
+                    if (vol < 0.4) {
+                        vol += 0.02;
+                        audio.volume = Math.min(vol, 0.4);
+                    } else {
+                        clearInterval(fadeIn);
+                    }
+                }, 100);
+
+                // Una vez activado, quitamos los escuchadores globales
+                document.removeEventListener('click', activarSonidoGlobal);
+                document.removeEventListener('touchstart', activarSonidoGlobal);
+            }).catch(error => {
+                console.log("El navegador aún bloquea el audio. Esperando un clic más directo.");
+            });
+        }
+    };
+
+    // 3. ESCUCHADORES (Cualquier interacción en el documento activa el audio)
+    document.addEventListener('click', activarSonidoGlobal);
+    document.addEventListener('touchstart', activarSonidoGlobal);
+    
+    // El scroll lo mantenemos como "intento", pero el clic es el que manda
+    window.addEventListener('scroll', activarSonidoGlobal, { once: true });
+
+    // 4. BOTÓN MANUAL (Siempre prioritario)
+    soundBtn.addEventListener('click', (e) => {
+        e.stopPropagation(); // Evita que el clic del documento se duplique aquí
+        
+        if (!hasStarted) {
+            activarSonidoGlobal();
+            return;
+        }
+
+        if (audio.paused) {
+            audio.play();
+            soundBtn.classList.add('playing');
+        } else {
+            audio.pause();
+            soundBtn.classList.remove('playing');
+        }
+    });
+  
 </script>
