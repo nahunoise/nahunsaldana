@@ -1,0 +1,105 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/navbar.astro';
+
+const libros = [
+    {
+        titulo: 'De la selva sus vueltas',
+        autor: 'Nahun Saldaña Macedo',
+        imagen: '/images/caratula_libro_dsv_2026.jpg', 
+        descripcion: 'Desde el encuentro con una víbora que marca el fin del juego, hasta el diseño de soluciones tecnológicas para un futuro en crisis, De la selva sus vueltas nos invita a escuchar el murmullo del Huallaga no como un eco del pasado, sino como una advertencia y una esperanza.',
+        link: '/libros/delaselvasusvueltas'
+    },
+    {
+        titulo: 'El armamento sonoro del ejército Asháninka',
+        autor: 'Nahun Saldaña Macedo',
+        imagen: '/images/fanzine-1.jpg',
+        descripcion: 'Un viaje a una de las historias de resistencia más fascinantes del Perú. Descubre como una de las comnidades más guerreras del Perú usaron el poder del sonido para defender su territorio y cultura frente a la invasión de los terroristas. Un relato que nos invita a reflexionar sobre el poder de la resistencia y el sonido como herramienta de lucha.',
+        link: 'https://amzn.eu/d/0aXb2XXI'
+    },
+    // Añade más libros aquí...
+];
+---
+
+<Layout title="Mis Libros">
+    <Navbar />
+    <main class="container">
+        <section class="proyectos">
+            <h1 style="text-align: center; margin-top: 40px;">Mis Libros</h1>
+            <p style="text-align: center; margin-bottom: 40px;">Explora mi biblioteca personal y publicaciones.</p>
+            
+            <div class="proyectos-grid">
+                {libros.map((libro) => (
+                    <a href={libro.link} class="proyecto">
+                        <img src={libro.imagen} alt={libro.titulo} loading="lazy" />
+                        <div class="proyecto-texto">
+                            <h3>{libro.titulo}</h3>
+                            <p>{libro.autor} — {libro.descripcion}</p>
+                        </div>
+                    </a>
+                ))}
+            </div>
+        </section>
+    </main>
+</Layout>
+
+<style>
+    /* Diseño exacto a la versión de inglés que te gustó */
+    .proyectos-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-top: 20px;
+    }
+
+    @media (min-width: 900px) {
+        .proyectos-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    .proyecto {
+        position: relative;
+        overflow: hidden;
+        border-radius: 16px;
+        display: block;
+        text-decoration: none;
+        aspect-ratio: 3 / 4;
+        background-color: rgba(0,0,0,0.05);
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .proyecto:hover {
+        transform: scale(1.02);
+    }
+
+    .proyecto img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 16px;
+    }
+
+    .proyecto-texto {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(transparent, rgba(0, 44, 20, 0.9));
+        color: white;
+        padding: 30px 20px 20px;
+        border-radius: 0 0 16px 16px;
+    }
+
+    .proyecto-texto h3 {
+        margin: 0;
+        font-size: 1.5rem;
+        color: #e9f1c6;
+    }
+
+    .proyecto-texto p {
+        margin: 5px 0 0;
+        font-size: 0.9rem;
+        opacity: 0.9;
+    }
+</style>

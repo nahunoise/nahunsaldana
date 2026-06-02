@@ -1,0 +1,184 @@
+---
+import LayoutLibro from '../layouts/LayoutLibro.astro';
+import Navbar from '../components/navbar.astro'; // Ajusta la ruta si tu componente Navbar está en otro sitio
+---
+
+<LayoutLibro title="Contenido Exclusivo — De la selva sus vueltas">
+    <main class="libro-experiencia descarga-page">
+        
+        <section class="section-padding content-center">
+            <div class="container small text-center reveal-init">
+                <span class="section-tag sans">Acceso Autorizado</span>
+                <h1 class="serif titulo-descarga">¡Gracias por tu apoyo estoy muy feliz de que estes aquí!</h1>
+                <p class="lead-text serif">Aquí tienes los archivos digitales de <strong>De la selva sus vueltas</strong> junto a sus paisajes sonoros.</p>
+                
+                <hr class="separador" />
+
+                <!-- BLOQUE DEL EBOOK -->
+                <div class="descarga-card">
+                    <h3 class="sans">01 / El Libro Digital</h3>
+                    <p>Descarga la versión completa en español e inglés del eBook en formato optimizado PDF.</p>
+                    <a href="/archivos/de-la-selva-sus-vueltas.pdf" download class="btn-main sans">
+                        📥 Descargar eBook (PDF)
+                    </a>
+                       <p>Descarga la versión en español del EPUB en formato optimizado para Apple y Kindle.</p>
+                    <a href="/archivos/de-la-selva-sus-vueltas.epub" download class="btn-main sans">
+                        📥 Descargar eBook (EPUB)
+                    </a>
+                        <p>Descarga la versión en inglés del EPUB en formato optimizado para Apple y Kindle.</p>
+                    <a href="/archivos/twists-of-the jungle.epub" download class="btn-main sans">
+                        📥 Descargar eBook (EPUB)
+                    </a>
+                </div>
+
+                <!-- BLOQUE DE LOS AUDIOS -->
+                <div class="descarga-card">
+                    <h3 class="sans">02 / Inmersión Sonora</h3>
+                    <p>Escucha los primeros capítulos narrados con los paisajes sonoros del río Huallaga. Próximamente más contenido </p>
+                    
+                    <div class="audio-player-container">
+                        <p class="audio-title serif">Capítulo 1: El murmullo del Huallaga</p>
+                        <audio controls class="reproductor">
+                            <source src="/sounds/capitulo-1.mp3" type="audio/mpeg" />
+                            Tu navegador no soporta el reproductor de audio.
+                        </audio>
+                    </div>
+                    
+                    <!-- Puedes duplicar este bloque si tienes más audios sueltos o subirlos en un .zip -->
+                    <a href="https://www.mediafire.com/file/6qvehrn5494kt82/paisajes_sonoros.zip/file" download class="btn-alt sans" style="display: inline-block; margin-top: 20px;">
+                        📦 Descargar todos los paisajes sonoros (.ZIP)
+                    </a>
+                </div>
+
+                <div style="margin-top: 60px;">
+                    <a href="/" class="link-volver serif">← Volver al inicio</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+</LayoutLibro>
+
+<style>
+    /* Reutilizamos tus variables estéticas */
+    :root {
+        --c-magenta: #ff00ff;
+        --c-naranja: #e67e22;
+        --font-sans: 'Jost', sans-serif;
+        --font-serif: 'Lora', serif;
+    }
+
+    .sans { font-family: var(--font-sans); text-transform: uppercase; letter-spacing: 2px; font-weight: 700; }
+    .serif { font-family: var(--font-serif); }
+
+    .descarga-page {
+        background-color: #0a0a0a;
+        min-height: 100vh;
+        color: #fff;
+    }
+
+    .content-center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 100px;
+    }
+
+    .text-center { text-align: center; }
+
+    .titulo-descarga {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        color: #fff;
+        margin-bottom: 20px;
+    }
+
+    .lead-text {
+        font-size: 1.2rem;
+        opacity: 0.8;
+        max-width: 600px;
+        margin: 0 auto 40px;
+    }
+
+    .separador {
+        border: 0;
+        border-top: 1px solid #222;
+        margin: 40px 0;
+    }
+
+    /* Tarjetas de descarga */
+    .descarga-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid #222;
+        padding: 40px 30px;
+        margin-bottom: 30px;
+        border-radius: 0px; /* Manteniendo tu estilo de bordes rectos de autor */
+        text-align: center;
+    }
+
+    .descarga-card h3 {
+        color: var(--c-magenta);
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    .descarga-card p {
+        opacity: 0.6;
+        font-size: 0.95rem;
+        margin-bottom: 25px;
+    }
+
+    /* Reproductor de Audio */
+    .audio-player-container {
+        max-width: 400px;
+        margin: 20px auto;
+        background: #111;
+        padding: 20px;
+        border: 1px solid #333;
+    }
+
+    .audio-title {
+        font-size: 0.9rem;
+        font-style: italic;
+        margin-bottom: 10px;
+        opacity: 0.9;
+    }
+
+    .reproductor {
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .link-volver {
+        color: opacity: 0.5;
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: opacity 0.3s;
+    }
+
+    .link-volver:hover {
+        opacity: 1;
+        color: var(--c-magenta);
+    }
+
+    /* Estilos de tus botones adaptados */
+    .btn-main { 
+        background: #fff; 
+        color: #000; 
+        padding: 15px 30px; 
+        text-decoration: none; 
+        transition: 0.3s; 
+        font-size: 12px; 
+        display: inline-block;
+    }
+    .btn-main:hover { background: var(--c-magenta); color: #fff; }
+
+    .btn-alt { 
+        border: 1px solid #444; 
+        color: #fff; 
+        padding: 15px 30px; 
+        text-decoration: none; 
+        transition: 0.3s; 
+        font-size: 12px; 
+    }
+    .btn-alt:hover { border-color: #fff; }
+</style>
