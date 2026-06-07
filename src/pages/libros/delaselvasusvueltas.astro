@@ -5,7 +5,7 @@ import LayoutLibro from '../../layouts/LayoutLibro.astro';
 <LayoutLibro title="De la selva sus vueltas — Libro por Nahun Saldaña">
     <main class="libro-experiencia">
         
-   <header class="hero-organic-v2">
+        <header class="hero-organic-v2">
             <div class="hero-bg-wrapper">
                 <div class="hero-bg-anim-container">
                     <img src="/images/A6-1.jpg" alt="Fondo Selva" class="hero-bg" id="parallax-bg" />
@@ -14,21 +14,23 @@ import LayoutLibro from '../../layouts/LayoutLibro.astro';
             <div class="hero-gradient-overlay"></div>
             
             <div class="hero-content-v2">
-                <span class="badge reveal-init sans">Preventa Exclusiva: Agotados</span>
+                <span class="badge reveal-init sans">Primera edición: Agotados</span>
                 <div class="titulo-container reveal-init delay-1">
                     <img src="/images/titulo-del-libro.png" alt="De la selva sus vueltas" class="titulo-png" />
                 </div>
-                <p class="hero-sub reveal-init delay-2 serif"> De la selva sus vueltas nos invita a escuchar el murmullo del Huallaga no como un eco del pasado, 
-                    sino como una advertencia y una esperanza. 
+                <p class="hero-sub reveal-init delay-2 serif">
                     Un testimonio sobre lo que significa afilar el machete en el siglo XXI para defender la vida en todas sus formas. 
-                    <strong>25 historias</strong> llenas de aventuras, encuentros y aprendizajes.<br></br> 
-<p class="hero-sub reveal-init delay-2 serif"> PRIMERA EDICIÓN IMPRESA AGOTADA.</p>
-                    
+                    <strong>25 historias</strong> llenas de aventuras, encuentros y aprendizajes.
+                </p> 
+
+                <!-- CONTENEDOR UNIFICADO HERO -->
                 <div class="hero-actions reveal-init delay-3">
-                        <!-- MODIFICADO: Botón para canjear el código de las postales -->
-                <button id="btn-canjear-codigo" class="btn-main sans" style="cursor: pointer;">
-                    ✨ TENGO UN CÓDIGO DE DESCARGA
-                </button>
+                    <a href="https://forms.gle/5JKsF49Jmtxo7jPE7" class="btn-alt sans">
+                        Notificar 3ª Edición (EU)
+                    </a>
+                    <button id="btn-canjear-codigo" class="btn-main sans">
+                        Código de descarga ✨
+                    </button>
                 </div>
             </div>
         </header>
@@ -37,7 +39,7 @@ import LayoutLibro from '../../layouts/LayoutLibro.astro';
             <div class="container small">
                 <span class="section-tag sans reveal">El Origen</span>
                 <blockquote class="big-quote serif reveal">
-                    "No eres una planta en una maceta para quedarte en un solo lugar sin echar raíces in la tierra."
+                    "No eres una planta en una maceta para quedarte en un solo lugar sin echar raíces en la tierra."
                 </blockquote>
                 <p class="quote-author sans reveal">— Cotita Macedo Panduro, mi madre</p>
             </div>
@@ -53,6 +55,60 @@ import LayoutLibro from '../../layouts/LayoutLibro.astro';
                         <p class="lead-text serif">A mis treinta y cinco años, me di cuenta de que lo más extraordinario no estaba en la próxima gran innovación, sino guardado en mi memoria.</p>
                         <p><strong>De la selva sus vueltas</strong> es un destilado de olores, sonidos y crónicas recolectadas a orillas del río Huallaga. Es el puente entre el diseño contemporáneo y la sabiduría amazónica que se niega a ser olvidada.</p>
                         <p>Este libro no es solo papel; es una pieza de colección numerada que explora la identidad, la tecnología y el territorio peruano desde una mirada personal y visceral.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding testimonials-section">
+            <div class="container">
+                <span class="section-tag sans reveal">Reseñas y Ecos</span>
+                <h2 class="serif section-title reveal">Lo que dicen los lectores</h2>
+                
+                <div class="testimonials-grid">
+                    <div class="testimonial-card reveal">
+                        <p class="serif">"Las historias cortas de Nahun sólo hacen bien al alma. Reflexiones, lecciones y ternura en cada una de ellas."</p>
+                        <span class="sans author">— Lourdes Martinez</span>
+                    </div>
+                    
+                    <div class="testimonial-card reveal">
+                        <p class="serif">"Me movilizó un montón 🙏🏽🙏🏽 hermoso libro"</p>
+                        <span class="sans author">— Fanny</span>
+                    </div>
+
+                    <div class="testimonial-card reveal">
+                        <p class="serif">"TENGO LA NECESIDAD DE LEER MÁS LIBROS TUYOS 🙈 que sea el primero de muchos ❤️"</p>
+                        <span class="sans author">— Naomi</span>
+                    </div>
+                    <div class="testimonial-card reveal">
+                        <p class="serif">"Maravilloso libro!! Lo recomiendo cien por cien"</p>
+                        <span class="sans author">— Carmen</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding gallery-section">
+            <div class="container">
+                <span class="section-tag sans reveal">Registro Visual</span>
+                <h2 class="serif section-title reveal">Memorias del lanzamiento</h2>
+                
+                <div class="gallery-grid">
+                    <div class="gallery-item wide reveal">
+                        <img src="/images/evento-1.jpg" alt="Ambiente de la inmersión sonora" loading="lazy" />
+                        <div class="item-caption sans">Portada del libro</div>
+                    </div>
+                    <div class="gallery-item reveal">
+                        <img src="/images/evento-2.jpg" alt="Libros numerados de la primera edición" loading="lazy" />
+                        <div class="item-caption sans">El sonido del Huallaga en vivo</div>
+                    </div>
+                    <div class="gallery-item reveal">
+                        <img src="/images/evento-3.jpg" alt="Nahun Saldaña presentando" loading="lazy" />
+                        <div class="item-caption sans">Lectura de crónicas</div>
+                    </div>
+                    <div class="gallery-item wide reveal">
+                        <img src="/images/evento-4.jpg" alt="Público del evento" loading="lazy" />
+                        <div class="item-caption sans">Comunidad y territorio</div>
                     </div>
                 </div>
             </div>
@@ -80,27 +136,30 @@ import LayoutLibro from '../../layouts/LayoutLibro.astro';
             </div>
         </section>
 
-      <section id="reserva" class="section-padding cta-final">
-    <div class="container small reveal">
-        <div class="cta-box">
-            <h2 class="serif">Forma parte de la historia</h2>
-            <p class="sans">Actualmente solo quedan libros en tiendas físicas.</p>
-            <p>TARAPOTO : <a href="https://www.instagram.com/jane_artisans/" target="_blank" class="serif"> JANE</a>: Jirón Ramirez Hurtado 390, esquina con jirón Lamas, Tarapoto 22202 </p>
-            <p>CUSCO : <a href="https://www.instagram.com/xapiriground/" target="_blank" class="serif">XAPIRI GROUND</a>: Plazoleta de San Blas 630, Cusco, Peru 08003 </p>
-            <p>LIMA :<a href="https://www.instagram.com/anexo_tienda/" target="_blank" class="serif">El ANEXO</a> : Cantuarias 140 td27, Case Miraflores, Peru </p>
-            
-            <div class="btn-group">
-                <a href="https://forms.gle/5JKsF49Jmtxo7jPE7" class="btn-alt sans">NOTIFICAME DE LA SEGUNDA EDICIÓN</a>
-                
-                <!-- MODIFICADO: Botón para canjear el código de las postales -->
-                <button id="btn-canjear-codigo" class="btn-main sans" style="cursor: pointer;">
-                    ✨ TENGO UN CÓDIGO DE DESCARGA
-                </button>
+        <section id="reserva" class="section-padding cta-final">
+            <div class="container small reveal">
+                <div class="cta-box">
+                    <h2 class="serif">Forma parte de la historia</h2>
+                    <p class="sans">Actualmente solo quedan libros en tiendas físicas.</p>
+                    <p>TARAPOTO : <a href="https://www.instagram.com/jane_artisans/" target="_blank" class="serif"> JANE</a>: Jirón Ramirez Hurtado 390, esquina con jirón Lamas, Tarapoto 22202 </p>
+                    <p>CUSCO : <a href="https://www.instagram.com/xapiriground/" target="_blank" class="serif">XAPIRI GROUND</a>: Plazoleta de San Blas 630, Cusco, Peru 08003 </p>
+                    <p>LIMA :<a href="https://www.instagram.com/arcadia_mediatica/" target="_blank" class="serif">ARCADIA MEDIATICA</a> :Alcanfores 295 tda. 17 Miraflores. Lima, Peru </p>
+                    <p>LIMA :<a href="https://www.instagram.com/anexo_tienda/" target="_blank" class="serif">El ANEXO</a> : Cantuarias 140 td27, Case Miraflores, Peru </p>
+                    <p>CHILE : <a href="https://www.instagram.com/alma_negra_libreria/" target="_blank" class="serif">Alma Negra Libreria</a> : Nueva de Lyon 63, Providencia, Santiago, Chile </p>
+                    <p>MADRID : <a href="https://www.instagram.com/kiosco.extra/" target="_blank" class="serif">Kiosco Extra</a> : Calle Embajadores 41, Madrid, Spain 28012 </p>
+
+                    <!-- GRUPO DE BOTONES FINALES CORREGIDOS -->
+                    <div class="btn-group">
+                        <a href="https://forms.gle/5JKsF49Jmtxo7jPE7" class="btn-alt-cta sans">NOTIFICAME DE LA TERCERA EDICIÓN (EU)</a>
+                        <button id="btn-canjear-codigo-footer" class="btn-main sans" style="cursor: pointer;">
+                            ✨ TENGO UN CÓDIGO DE DESCARGA
+                        </button>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</section>
-<footer class="footer-autor section-padding">
+        </section>
+
+        <footer class="footer-autor section-padding">
             <div class="container">
                 <div class="footer-grid">
                     <div class="footer-brand reveal">
@@ -110,8 +169,10 @@ import LayoutLibro from '../../layouts/LayoutLibro.astro';
                     
                     <div class="footer-links reveal">
                         <div class="link-group">
-                            <span class="sans label">Proyectos</span>
+                            <span class="sans label">Proyectos Arte</span>
                             <a href="https://www.naun.xyz/" target="_blank" class="serif">naun.xyz</a>
+                             <span class="sans label">Proyectos Profesionales</span>
+                            <a href="https://www.nahunsaldana.com/" target="_blank" class="serif">nahunsaldana.com</a>
                         </div>
                         <div class="link-group">
                             <span class="sans label">Social</span>
@@ -132,18 +193,19 @@ import LayoutLibro from '../../layouts/LayoutLibro.astro';
                 </div>
             </div>
         </footer>
-     <audio id="bg-sound" loop playsinline>
-    <source src="/sounds/huallaga-ambience.mp3" type="audio/mpeg" />
-</audio>
 
-<button id="sound-toggle" class="sound-control" aria-label="Controlar sonido">
-    <div class="sound-icon-wrapper">
-        <span class="bar bar-1"></span>
-        <span class="bar bar-2"></span>
-        <span class="bar bar-3"></span>
-    </div>
-    <span class="sound-text sans">AUDIO</span>
-</button>
+        <audio id="bg-sound" loop playsinline>
+            <source src="/sounds/huallaga-ambience.mp3" type="audio/mpeg" />
+        </audio>
+
+        <button id="sound-toggle" class="sound-control" aria-label="Controlar sonido">
+            <div class="sound-icon-wrapper">
+                <span class="bar bar-1"></span>
+                <span class="bar bar-2"></span>
+                <span class="bar bar-3"></span>
+            </div>
+            <span class="sound-text sans">AUDIO</span>
+        </button>
     </main>
 </LayoutLibro>
 
@@ -161,12 +223,12 @@ import LayoutLibro from '../../layouts/LayoutLibro.astro';
     .serif { font-family: var(--font-serif); }
 
     /* LAYOUT BASE */
-    .container { max-width: 1100px; margin: 0 auto; padding: 0 25px; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 25px; box-sizing: border-box; }
     .container.small { max-width: 800px; }
     .section-padding { padding: 120px 0; }
     
-    /* HERO (Corrección de margen y scroll) */
-   .hero-organic-v2 { 
+    /* HERO */
+    .hero-organic-v2 { 
         height: 100vh; 
         position: relative; 
         display: flex; 
@@ -175,19 +237,17 @@ import LayoutLibro from '../../layouts/LayoutLibro.astro';
         overflow: hidden;
         background: #000;
     }
-.hero-bg-wrapper { 
+    .hero-bg-wrapper { 
         position: absolute; 
         top: 0; 
         left: 0; 
         width: 100%; 
-        height: 130%; /* Altura extra para evitar bordes al scrollear */
+        height: 130%; 
         z-index: 1; 
     }   
-     .hero-bg { width: 100%; height: 100%; object-fit: cover; opacity: 0.5; }
-     .hero-bg-anim-container {
+    .hero-bg-anim-container {
         width: 100%;
         height: 100%;
-        /* Animación lenta de 20 segundos que simula respiración */
         animation: jungleBreath 20s infinite alternate ease-in-out;
         will-change: transform, filter;
     }
@@ -197,23 +257,13 @@ import LayoutLibro from '../../layouts/LayoutLibro.astro';
         object-fit: cover; 
         opacity: 0.55; 
         filter: saturate(1.2) contrast(1.1);
-        transition: transform 0.1s ease-out; /* Suaviza el paralaje */
+        transition: transform 0.1s ease-out;
     }
 
-    /* KEYFRAMES DE LA ANIMACIÓN */
     @keyframes jungleBreath {
-        0% {
-            transform: scale(1);
-            filter: saturate(1.2) brightness(1);
-        }
-        50% {
-            transform: scale(1.08); /* Zoom muy lento e inmersivo */
-            filter: saturate(1.5) brightness(1.1) hue-rotate(5deg); /* Los colores vibran sutilmente */
-        }
-        100% {
-            transform: scale(1.03);
-            filter: saturate(1.2) brightness(1);
-        }
+        0% { transform: scale(1); filter: saturate(1.2) brightness(1); }
+        50% { transform: scale(1.08); filter: saturate(1.5) brightness(1.1) hue-rotate(5deg); }
+        100% { transform: scale(1.03); filter: saturate(1.2) brightness(1); }
     }
 
     .hero-gradient-overlay { 
@@ -224,26 +274,72 @@ import LayoutLibro from '../../layouts/LayoutLibro.astro';
         height: 70%; 
         background: linear-gradient(to top, #0a0a0a 15%, rgba(10, 10, 10, 0.4) 45%, transparent 100%); 
         z-index: 2; 
-        pointer-events: none; /* Crucial para no romper el scroll */
+        pointer-events: none;
     }
-    .hero-gradient-overlay { 
-        position: absolute; bottom: 0; left: 0; width: 100%; height: 60%; 
-        background: linear-gradient(to top, #0a0a0a 10%, transparent); z-index: 2; pointer-events: none;
-    }
-.hero-content-v2 {
+
+    .hero-content-v2 {
         position: relative;
         z-index: 10;
         text-align: center;
-        /* Añadimos un margen interno de seguridad */
-        padding: 0 30px; 
+        padding: 0 20px; 
         max-width: 900px; 
         display: flex;
         flex-direction: column;
         align-items: center;
-        /* Evita que el contenedor sea más ancho que la pantalla */
         width: 100%; 
         box-sizing: border-box;
-    }    .titulo-png { width: 100%; max-width: 550px; height: auto; filter: drop-shadow(0 0 20px rgba(255,0,255,0.3)); }
+    }    
+    .titulo-png { width: 100%; max-width: 550px; height: auto; filter: drop-shadow(0 0 20px rgba(255,0,255,0.3)); }
+    .hero-sub { color: #fff; font-size: clamp(1.1rem, 2.5vw, 1.4rem); margin: 20px 0 30px; max-width: 650px; line-height: 1.5; }
+
+    /* --- BOTONES DEL HERO (Fuerza Lado a Lado Responsivo) --- */
+    .hero-actions {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        width: 100%;
+        max-width: 550px;
+        margin: 10px auto 0 auto;
+        box-sizing: border-box;
+    }
+
+    .hero-actions .btn-main, 
+    .hero-actions .btn-alt {
+        flex: 1;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0 15px;
+        font-size: clamp(0.7rem, 2vw, 0.85rem);
+        letter-spacing: 0.5px;
+        text-decoration: none;
+        border-radius: 4px;
+        white-space: nowrap;
+        text-transform: uppercase;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-sizing: border-box;
+        height: 50px;
+    }
+
+    .hero-actions .btn-main {
+        background-color: #fff;
+        color: #000;
+        border: 1px solid #fff;
+    }
+
+    .hero-actions .btn-alt {
+        background-color: transparent;
+        color: #fff;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+    }
+
+    .hero-actions .btn-main:hover { background-color: var(--c-magenta); border-color: var(--c-magenta); color: #fff; }
+    .hero-actions .btn-alt:hover { border-color: #fff; background: rgba(255,255,255,0.1); }
 
     /* TEXTOS EDITORIALES */
     .section-tag { color: var(--c-magenta); font-size: 12px; display: block; margin-bottom: 20px; }
@@ -262,317 +358,155 @@ import LayoutLibro from '../../layouts/LayoutLibro.astro';
     .lead-text { font-size: 1.6rem; color: #fff; margin-bottom: 30px; line-height: 1.3; }
     .story-right p { font-size: 1.1rem; opacity: 0.8; margin-bottom: 20px; }
 
+    /* TESTIMONIALS SECTON */
+    .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px; margin-top: 40px; }
+    .testimonial-card { background: #111; padding: 30px; border-radius: 4px; border: 1px solid #222; }
+    .testimonial-card p { font-size: 1.05rem; line-height: 1.4; margin-bottom: 15px; font-style: italic; color: #eee; }
+    .testimonial-card .author { font-size: 11px; opacity: 0.5; display: block; }
+
     /* FEATURES */
     .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; border-top: 1px solid #333; padding-top: 60px; }
     .f-num { color: var(--c-naranja); font-size: 14px; display: block; margin-bottom: 15px; }
     .feature-card h3 { font-size: 1.2rem; margin-bottom: 10px; }
     .feature-card p { font-size: 0.9rem; opacity: 0.6; }
 
-    /* CTA BOX */
+    /* CTA FINAL SECCIÓN Verde */
     .cta-final {
-        background-color: #55AD4C; /* Tu verde selva */
-        color: #0a0a0a; /* Texto oscuro para máxima legibilidad sobre el verde */
-        padding: 150px 0; /* Un poco más de aire para el cierre */
+        background-color: #55AD4C;
+        color: #0a0a0a;
+        padding: 150px 0;
     }
 
-    /* Quitamos el fondo oscuro del cta-box para que respire el verde */
-    .cta-box {
-        text-align: center;
-        background: transparent; /* Ahora el fondo es el verde de la sección */
-        padding: 0;
-        border: none;
-    }
+    .cta-box { text-align: center; background: transparent; padding: 0; border: none; }
+    .cta-box h2 { font-size: clamp(2.5rem, 6vw, 4rem); margin-bottom: 20px; color: #000; line-height: 1; }
+    .cta-box .sans { font-size: 14px; letter-spacing: 3px; color: rgba(0, 0, 0, 0.7); margin-bottom: 50px; display: block; }
+    .cta-box p a { color: #000; font-weight: bold; }
 
-    .cta-box h2 {
-        font-size: clamp(2.5rem, 6vw, 4rem);
-        margin-bottom: 20px;
-        color: #000; /* Negro puro para que "golpee" visualmente */
-        line-height: 1;
-    }
+    /* BOTONES ADAPTADOS AL CONTAINER VERDE FINAL */
+    .btn-group { display: flex; gap: 20px; justify-content: center; margin-top: 50px; }
+    .btn-main-cta { background: #000; color: #fff; padding: 20px 40px; text-decoration: none; font-size: 13px; transition: all 0.3s ease; border: 1px solid #000; font-weight: bold; }
+    .btn-main-cta:hover { background: transparent; color: #000; transform: translateY(-5px); }
+    .btn-alt-cta { background: transparent; color: #000; padding: 20px 40px; border: 1px solid #000; text-decoration: none; font-size: 13px; transition: all 0.3s ease; font-weight: bold; }
+    .btn-alt-cta:hover { background: rgba(255, 255, 255, 0.3); transform: translateY(-5px); }
 
-    .cta-box .sans {
-        font-size: 14px;
-        letter-spacing: 3px;
-        color: rgba(0, 0, 0, 0.7); /* Un negro suavizado para la bajada */
-        margin-bottom: 50px;
-        display: block;
-    }
+    /* --- DINÁMICA DE LA GALERÍA RESPONSIVA --- */
+    .gallery-section { padding: 100px 0; background: #0a0a0a; }
+    .gallery-section .section-title { color: #fff; font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 40px; }
+    .gallery-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+    .gallery-item { position: relative; overflow: hidden; border-radius: 6px; background-color: #111; }
+    .gallery-item img { width: 100%; height: 260px; object-fit: cover; display: block; transition: transform 0.4s ease; }
+    .gallery-item:hover img { transform: scale(1.04); }
+    .item-caption { padding: 15px; font-size: 0.9rem; background-color: #111; color: #ccc; border-top: 1px solid #222; }
 
-    /* BOTONES ADAPTADOS AL VERDE */
-    .btn-group {
-        display: flex;
-        gap: 20px;
-        justify-content: center;
-        margin-top: 50px;
-    }
+    /* FOOTER */
+    .footer-autor { background-color: #000; border-top: 1px solid #222; padding-top: 80px; padding-bottom: 40px; }
+    .footer-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 60px; align-items: start; margin-bottom: 80px; }
+    .logo-footer { font-size: 1.5rem; display: block; margin-bottom: 10px; color: #fff; }
+    .footer-brand p { opacity: 0.6; font-size: 1.1rem; line-height: 1.4; }
+    .footer-links { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+    .link-group .label { font-size: 10px; color: var(--c-naranja); display: block; margin-bottom: 15px; opacity: 0.8; }
+    .link-group a { color: #fff; text-decoration: none; font-size: 1.2rem; transition: 0.3s; display: block; }
+    .link-group a:hover { color: var(--c-magenta); transform: translateX(5px); }
+    .social-row { display: flex; flex-direction: column; gap: 8px; }
+    .footer-bottom { border-top: 1px solid #111; padding-top: 30px; font-size: 10px; opacity: 0.4; text-align: center; letter-spacing: 1px; }
+    .badge { background: var(--c-naranja); color: #000; padding: 4px 12px; border-radius: 50px; font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; display: inline-block; margin-bottom: 10px; }
 
-    /* Botón Principal (Negro sobre el verde resalta mucho) */
-    .btn-main {
-        background: #000;
-        color: #fff;
-        padding: 20px 40px;
-        border-radius: 0;
-        text-decoration: none;
-        font-size: 13px;
-        transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
-        border: 1px solid #000;
-    }
-
-    .btn-main:hover {
-        background: transparent;
-        color: #000;
-        transform: translateY(-5px);
-    }
-
-    /* Botón Alternativo (Blanco/Transparente) */
-    .btn-alt {
-        background: transparent;
-        color: #000;
-        padding: 20px 40px;
-        border: 1px solid #000;
-        text-decoration: none;
-        font-size: 13px;
-        transition: all 0.3s ease;
-    }
-
-    .btn-alt:hover {
-        background: rgba(255, 255, 255, 0.3);
-        transform: translateY(-5px);
-    }
-
-    /* Ajuste para móvil */
-    @media (max-width: 768px) {
-        .btn-group {
-            flex-direction: column;
-            width: 100%;
-            max-width: 300px;
-            margin: 40px auto 0;
-        }
-        .cta-final {
-            padding: 100px 0;
-        }
-    }
-    /* BOTONES */
-    .btn-main { background: #fff; color: #000; padding: 18px 35px; border-radius: 0; text-decoration: none; transition: 0.3s; font-size: 13px; }
-    .btn-main:hover { background: var(--c-magenta); color: #fff; }
-    .btn-alt { border: 1px solid #444; color: #fff; padding: 18px 35px; text-decoration: none; transition: 0.3s; font-size: 13px; }
-    .btn-alt:hover { border-color: #fff; }
-
-    /* RESPONSIVE */
-    @media (max-width: 768px) {
-        .story-grid { grid-template-columns: 1fr; gap: 40px; }
-        .features-grid { grid-template-columns: 1fr; }
-        .btn-group { flex-direction: column; }
-        .section-padding { padding: 80px 0; }
-    }
-
-    .footer-autor {
-        background-color: #000;
-        border-top: 1px solid #222;
-        padding-top: 80px;
-        padding-bottom: 40px;
-    }
-
-    .footer-grid {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        gap: 60px;
-        align-items: start;
-        margin-bottom: 80px;
-    }
-
-    .logo-footer {
-        font-size: 1.5rem;
-        display: block;
-        margin-bottom: 10px;
-        color: var(white); /* Un toque de tu color de marca */
-    }
-
-    .footer-brand p {
-        opacity: 0.6;
-        font-size: 1.1rem;
-        line-height: 1.4;
-    }
-
-    .footer-links {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 30px;
-    }
-
-    .link-group .label {
-        font-size: 10px;
-        color: var(--c-naranja);
-        display: block;
-        margin-bottom: 15px;
-        opacity: 0.8;
-    }
-
-    .link-group a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 1.2rem;
-        transition: 0.3s;
-        display: block;
-    }
-
-    .link-group a:hover {
-        color: var(--c-magenta);
-        transform: translateX(5px);
-    }
-
-    .social-row {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-    }
-
-    .footer-bottom {
-        border-top: 1px solid #111;
-        padding-top: 30px;
-        font-size: 10px;
-        opacity: 0.4;
-        text-align: center;
-        letter-spacing: 1px;
-    }
-
-    /* RESPONSIVE FOOTER */
-    @media (max-width: 768px) {
-        .footer-grid {
-            grid-template-columns: 1fr;
-            gap: 40px;
-        }
-        .footer-links {
-            grid-template-columns: 1fr;
-            gap: 40px;
-        }
-    }
-    .badge {
-        background: var(--c-naranja);
-        color: #000; /* Negro para contraste nítido */
-        padding: 4px 12px; /* Más estrecho */
-        border-radius: 50px;
-        font-size: 9px; /* Tamaño reducido */
-        font-weight: 700;
-        letter-spacing: 2px; /* Espaciado elegante estilo Futura */
-        text-transform: uppercase;
-        display: inline-block;
-        margin-bottom: 10px; /* Espacio con el título */
-    }
-   .sound-control {
-        position: fixed;
-        bottom: 30px; /* Cambiado de 750px a 30px */
-        right: 30px;
-        z-index: 1000;
-        background: rgba(0, 0, 0, 0.6);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        padding: 10px 15px;
-        border-radius: 50px;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        backdrop-filter: blur(5px);
-        transition: all 0.3s ease;
-    }
-
-    .sound-control:hover {
-        background: rgba(255, 0, 255, 0.2);
-        border-color: var(--c-magenta);
-    }
-
-    .sound-text {
-        font-size: 10px;
-        color: #fff;
-        letter-spacing: 1px;
-    }
-
-    /* Animación de barras de sonido */
-    .sound-icon-wrapper {
-        display: flex;
-        align-items: flex-end;
-        gap: 2px;
-        height: 12px;
-        width: 15px;
-    }
-
-    .bar {
-        width: 2px;
-        background: #fff;
-        height: 100%;
-        transition: height 0.3s ease;
-    }
-
-    /* Estado cuando está sonando (Playing) */
-    .playing .bar {
-        animation: soundBars 0.8s infinite alternate;
-    }
+    /* CONTROL DE SONIDO */
+    .sound-control { position: fixed; bottom: 30px; right: 30px; z-index: 1000; background: rgba(0, 0, 0, 0.6); border: 1px solid rgba(255, 255, 255, 0.2); padding: 10px 15px; border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 10px; backdrop-filter: blur(5px); transition: all 0.3s ease; }
+    .sound-control:hover { background: rgba(255, 0, 255, 0.2); border-color: var(--c-magenta); }
+    .sound-text { font-size: 10px; color: #fff; letter-spacing: 1px; }
+    .sound-icon-wrapper { display: flex; align-items: flex-end; gap: 2px; height: 12px; width: 15px; }
+    .bar { width: 2px; background: #fff; height: 100%; transition: height 0.3s ease; }
+    .playing .bar { animation: soundBars 0.8s infinite alternate; }
     .playing .bar-1 { animation-delay: 0.1s; }
     .playing .bar-2 { animation-delay: 0.3s; }
     .playing .bar-3 { animation-delay: 0.2s; }
+    .sound-control:not(.playing) .bar { height: 2px !important; opacity: 0.5; }
+    @keyframes soundBars { 0% { height: 3px; } 100% { height: 100%; } }
 
-    /* Estado cuando está en silencio (Muted) */
-    .sound-control:not(.playing) .bar {
-        height: 2px !important;
-        opacity: 0.5;
+    /* ==========================================================================
+       MEDIA QUERIES (BREAKPOINTS RESPONSIVOS UNIFICADOS)
+       ========================================================================== */
+    
+    /* Pantallas Medianas / Tablets (768px o más) */
+    @media (min-width: 768px) {
+        .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+        .gallery-item img { height: 300px; }
     }
 
-    @keyframes soundBars {
-        0% { height: 3px; }
-        100% { height: 100%; }
+    /* Pantallas Grandes / Desktop (1024px o más) */
+    @media (min-width: 1024px) {
+        .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+        .gallery-item.wide { grid-column: span 2; }
+        .gallery-item img { height: 350px; }
     }
 
+    /* Ajustes específicos para pantallas colapsables o móviles (Menos de 768px) */
     @media (max-width: 768px) {
+        .section-padding { padding: 80px 0; }
+        .story-grid { grid-template-columns: 1fr; gap: 40px; }
+        .features-grid { grid-template-columns: 1fr; }
+        
+        /* Cta Final Botones se apilan */
+        .btn-group { flex-direction: column; width: 100%; max-width: 320px; margin: 40px auto 0; gap: 12px; }
+        .btn-main-cta, .btn-alt-cta { width: 100%; text-align: center; padding: 18px 20px; }
+        .cta-final { padding: 100px 0; }
+        
+        .footer-grid, .footer-links { grid-template-columns: 1fr; gap: 40px; }
         .sound-control { bottom: 20px; right: 20px; padding: 8px 12px; }
+    }
+
+    /* Pantallas Móviles Extremadamente Pequeñas (Menos de 380px) */
+    @media (max-width: 380px) {
+        .hero-actions {
+            flex-direction: column;
+            gap: 10px;
+        }
+        .hero-actions .btn-main, 
+        .hero-actions .btn-alt {
+            width: 100%;
+        }
     }
 </style>
 
 <script>
-    // MODIFICADO: Lógica de validación del código y redirección
-    const btnCanjear = document.getElementById('btn-canjear-codigo');
+    // Lógica de validación de códigos de descarga (Unificado para ambos botones por seguridad)
+    const codigosValidos = [
+        "AZ82X", "KL93M", "QP11B", "TR74V", "WY90K",
+        "BN44P", "JH61W", "FD29L", "CX05Z", "MK77R",
+        "HG32Q", "PL88V", "TY14M", "RE99X", "IU55K",
+        "NB21P", "VC63Z", "SA07W", "PO82L", "XF49Q",
+        "LM36R", "QW58V", "ER12M", "TY90X", "UI34K", 
+        "OP77P", "AS22Z", "DF68W", "GH05L", "JK83Q", 
+        "ZX19R", "CV44V", "BN31M", "ML88X", "QW56K", 
+        "ER23P", "TY09Z", "UI78W", "OP45L", "AS67Q", 
+        "DF12R", "GH90V", "JK34M", "ZX56X", "CV78K", 
+        "BN09P", "ML22Z", "QW67W", "ER89L", "TY34Q", 
+        "UI12R", "OP56V", "AS90M", "DF43X", "GH21K", 
+    ];
 
-    if (btnCanjear) {
-        // Los 20 códigos válidos e intocables de tus postales
-        const codigosValidos = [
-            "AZ82X", "KL93M", "QP11B", "TR74V", "WY90K",
-            "BN44P", "JH61W", "FD29L", "CX05Z", "MK77R",
-            "HG32Q", "PL88V", "TY14M", "RE99X", "IU55K",
-            "NB21P", "VC63Z", "SA07W", "PO82L", "XF49Q",
-            "LM36R", "QW58V", "ER12M", "TY90X", "UI34K", 
-            "OP77P", "AS22Z", "DF68W", "GH05L", "JK83Q", 
-            "ZX19R", "CV44V", "BN31M", "ML88X", "QW56K", 
-            "ER23P", "TY09Z", "UI78W", "OP45L", "AS67Q", 
-            "DF12R", "GH90V", "JK34M", "ZX56X", "CV78K", 
-            "BN09P", "ML22Z", "QW67W", "ER89L", "TY34Q", 
-            "UI12R", "OP56V", "AS90M", "DF43X", "GH21K", 
-        ];
+    const procesarCanje = () => {
+        const inputUsuario = prompt("Introduce el código único de tu postal:");
+        if (!inputUsuario) return;
 
-        btnCanjear.addEventListener('click', () => {
-            const inputUsuario = prompt("Introduce el código único de tu postal:");
-            
-            if (!inputUsuario) return; // Si cancela, salimos
+        const codigoLimpio = inputUsuario.trim().toUpperCase();
+        if (codigosValidos.includes(codigoLimpio)) {
+            window.location.href = "/descarga-exclusiva";
+        } else {
+            alert("❌ Código no válido. Por favor, revísalo bien.");
+        }
+    };
 
-            const codigoLimpio = inputUsuario.trim().toUpperCase();
+    document.getElementById('btn-canjear-codigo')?.addEventListener('click', procesarCanje);
+    document.getElementById('btn-canjear-codigo-footer')?.addEventListener('click', procesarCanje);
 
-            if (codigosValidos.includes(codigoLimpio)) {
-                // Código válido: Redirigimos a la página que crees para la descarga
-                window.location.href = "/descarga-exclusiva";
-            } else {
-                alert("❌ Código no válido. Por favor, revísalo bien.");
-            }
-        });
-    }
-
-  // JS PARALLAX MEJORADO
+    // JS PARALLAX MEJORADO
     const bg = document.getElementById('parallax-bg');
-    
-    // Usamos requestAnimationFrame para máxima fluidez
     let lastScrollY = window.pageYOffset;
     let ticking = false;
 
     function updateParallax() {
         if(bg) {
-            // El paralaje ahora usa translate3d para usar la potencia de la tarjeta de video
             bg.style.transform = `translate3d(0, ${lastScrollY * 0.35}px, 0)`;
         }
         ticking = false;
@@ -594,11 +528,11 @@ import LayoutLibro from '../../layouts/LayoutLibro.astro';
 
     document.querySelectorAll('.reveal, .reveal-init').forEach(el => observer.observe(el));
 
- const audio = document.getElementById('bg-sound');
+    // AUDIO NARRATIVO CONTROL
+    const audio = document.getElementById('bg-sound') as HTMLAudioElement;
     const soundBtn = document.getElementById('sound-toggle');
     let hasStarted = false;
 
-    // 1. FORZAR LOOP MANUAL Y PROPIEDADES
     if (audio) {
         audio.loop = true;
         audio.addEventListener('ended', function() {
@@ -607,9 +541,8 @@ import LayoutLibro from '../../layouts/LayoutLibro.astro';
         }, false);
     }
 
-    // 2. FUNCIÓN MAESTRA DE REPRODUCCIÓN
     const activarSonidoGlobal = () => {
-        if (hasStarted || !audio) return;
+        if (hasStarted || !audio || !soundBtn) return;
 
         audio.volume = 0;
         const playPromise = audio.play();
@@ -619,7 +552,6 @@ import LayoutLibro from '../../layouts/LayoutLibro.astro';
                 hasStarted = true;
                 soundBtn.classList.add('playing');
                 
-                // Fade in suave para que no asuste
                 let vol = 0;
                 const fadeIn = setInterval(() => {
                     if (vol < 0.4) {
@@ -630,26 +562,20 @@ import LayoutLibro from '../../layouts/LayoutLibro.astro';
                     }
                 }, 100);
 
-                // Una vez activado, quitamos los escuchadores globales
                 document.removeEventListener('click', activarSonidoGlobal);
                 document.removeEventListener('touchstart', activarSonidoGlobal);
             }).catch(error => {
-                console.log("El navegador aún bloquea el audio. Esperando un clic más directo.");
+                console.log("Audio encadenado en espera de interacción directa.");
             });
         }
     };
 
-    // 3. ESCUCHADORES (Cualquier interacción en el documento activa el audio)
     document.addEventListener('click', activarSonidoGlobal);
     document.addEventListener('touchstart', activarSonidoGlobal);
-    
-    // El scroll lo mantenemos como "intento", pero el clic es el que manda
     window.addEventListener('scroll', activarSonidoGlobal, { once: true });
 
-    // 4. BOTÓN MANUAL (Siempre prioritario)
-    soundBtn.addEventListener('click', (e) => {
-        e.stopPropagation(); // Evita que el clic del documento se duplique aquí
-        
+    soundBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
         if (!hasStarted) {
             activarSonidoGlobal();
             return;
@@ -663,5 +589,4 @@ import LayoutLibro from '../../layouts/LayoutLibro.astro';
             soundBtn.classList.remove('playing');
         }
     });
-  
 </script>
