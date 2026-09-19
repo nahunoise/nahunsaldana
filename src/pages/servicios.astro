@@ -1,0 +1,587 @@
+---
+// Ruta: src/pages/servicios.astro  →  https://www.nahunsaldana.com/servicios
+// Ajusta la ruta del layout si tu archivo se llama distinto.
+import Layout from "../layouts/Layout.astro";
+
+/* ------------------------------------------------------------------
+   DATOS EDITABLES
+------------------------------------------------------------------ */
+const email = "nahun.saldana.macedo@gmail.com"; // idealmente uno con tu dominio
+const reservaUrl = ""; // pega aquí tu enlace de Cal.com / Calendly cuando lo tengas
+const mostrarPrecios = false; // pon false para ocultar todos los precios
+
+const asuntoContacto = encodeURIComponent("Quiero hablar de un proyecto");
+const asuntoDiagnostico = encodeURIComponent("Diagnóstico de paisaje sonoro");
+const mailto = `mailto:${email}?subject=${asuntoContacto}`;
+const mailtoDiagnostico = `mailto:${email}?subject=${asuntoDiagnostico}`;
+
+const ctaUrl = reservaUrl || mailto;
+const ctaTexto = reservaUrl
+  ? "Reservar una conversación de 30 min"
+  : "Escríbeme para hablar 30 min";
+
+const servicios = [
+  {
+    id: "workshop",
+    titulo: "Workshop de innovación y futuros",
+    paraQuien:
+      "Para equipos directivos, laboratorios de innovación, escuelas y programas de emprendimiento.",
+    descripcion:
+      "Una sesión facilitada para explorar un reto, imaginar escenarios futuros y salir con ideas priorizadas y próximos pasos claros.",
+    incluye: [
+      "Preparación previa con tu equipo",
+      "Diseño y facilitación de la sesión",
+      "Resumen con conclusiones y hoja de ruta",
+    ],
+    formato: "Media jornada o jornada completa, presencial en Madrid u online",
+    precio: "Desde 800 €",
+  },
+  {
+    id: "sprint",
+    titulo: "Sprint de validación",
+    paraQuien:
+      "Para startups y equipos que van a lanzar o rediseñar un producto o servicio.",
+    descripcion:
+      "Dos semanas para probar tu idea con usuarios reales antes de invertir más tiempo y dinero.",
+    incluye: [
+      "Definición del reto y de lo que hay que validar",
+      "Entrevistas o pruebas con usuarios reales",
+      "Mapa del recorrido del cliente y prototipo",
+      "Informe con recomendaciones concretas",
+    ],
+    formato: "2 semanas, con alcance y entregables definidos desde el inicio",
+    precio: "Desde 1.500 €",
+  },
+  {
+    id: "mentoria",
+    titulo: "Mentoría estratégica",
+    paraQuien:
+      "Para fundadores, directivos y líderes de proyectos de impacto.",
+    descripcion:
+      "Sesiones individuales para pensar en voz alta un reto complejo: producto, estrategia, equipo o transición hacia la sostenibilidad.",
+    incluye: [
+      "Sesiones individuales de 60 a 90 minutos",
+      "Foco en un reto real de tu proyecto",
+      "Acuerdos y próximos pasos al final de cada sesión",
+    ],
+    formato: "Online",
+    precio: "Sesión suelta 90 €, bono de 4 sesiones 320 €",
+  },
+];
+
+const pasos = [
+  {
+    titulo: "Conversación inicial de 30 minutos, sin coste",
+    texto: "Entiendo tu reto y te digo con honestidad si puedo ayudarte.",
+  },
+  {
+    titulo: "Propuesta cerrada",
+    texto: "Alcance, fechas y precio claros antes de empezar.",
+  },
+  {
+    titulo: "Entrega y seguimiento",
+    texto: "Te acompaño hasta que tengas resultados que puedas usar.",
+  },
+];
+
+// Añade aquí el resultado de cada proyecto cuando lo tengas (campo "resultado").
+const casos = [
+  {
+    titulo: "Escuchadores",
+    detalle: "El poder del paisaje sonoro para conservar. Fundador.",
+    url: "https://www.escuchadores.com/",
+  },
+  {
+    titulo: "Lucidum",
+    detalle: "La convivencia entre el lobo y los humanos. Líder de proyecto.",
+    url: "https://www.weareoverview.com/work/lucidom-ai",
+  },
+  {
+    titulo: "AliviaMed",
+    detalle: "Consultas médicas a una llamada de distancia. Product Owner.",
+    url: "https://elcomercio.pe/publirreportaje/aliviamed-consultas-medicas-a-una-llamada-de-distancia-noticia/",
+  },
+];
+---
+
+<Layout title="Servicios">
+  <div class="container">
+    <!-- Si ya tienes un componente de header/menú, sustituye este bloque por él
+         y añade el enlace a /servicios en tu lista de navegación. -->
+    <header class="header">
+      <a class="logo" href="/">
+        <img src="/logo.svg" alt="Nahun Saldaña Macedo" height="28" />
+      </a>
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">☰</button>
+    </header>
+
+    <nav class="fullscreen-menu" id="menu" aria-label="Principal">
+      <button class="close-btn" id="closeBtn" aria-label="Cerrar menú">×</button>
+      <ul>
+        <li><a href="/about">SOBRE MÍ</a></li>
+        <li><a href="/projects">PROYECTOS</a></li>
+        <li><a href="/services">SERVICIOS</a></li>
+        <li><a href="/libros">MIS LIBROS</a></li>
+        <li><a href="/jardindigital">JARDÍN DIGITAL</a></li>
+        <li><a href="/contact">CONTACTO</a></li>
+        <li><a href="/en/">EN</a></li>
+      </ul>
+    </nav>
+
+    <main class="pagina">
+      <!-- INTRODUCCIÓN -->
+      <section class="intro">
+        <h1>Trabajemos juntos</h1>
+        <p class="lede">
+          Acompaño a organizaciones, startups e instituciones a convertir retos
+          complejos en proyectos viables, con diseño, tecnología y un enfoque
+          regenerativo. Trabajo en formatos cortos y con alcance cerrado, para
+          que veas resultados desde la primera semana.
+        </p>
+        <div class="acciones">
+          <a class="cta cta-primary" href={ctaUrl}>{ctaTexto}</a>
+        </div>
+      </section>
+
+      <!-- SERVICIOS -->
+      <section aria-label="Servicios">
+        {
+          servicios.map((s) => (
+            <article class="servicio" id={s.id}>
+              <div class="servicio-cabecera">
+                <h2>{s.titulo}</h2>
+                <p class="para-quien">{s.paraQuien}</p>
+              </div>
+              <div class="servicio-cuerpo">
+                <p>{s.descripcion}</p>
+                <ul class="incluye">
+                  {s.incluye.map((item) => (
+                    <li>{item}</li>
+                  ))}
+                </ul>
+                <dl class="meta">
+                  <div>
+                    <dt>Formato</dt>
+                    <dd>{s.formato}</dd>
+                  </div>
+                  {mostrarPrecios && (
+                    <div>
+                      <dt>Inversión</dt>
+                      <dd class="precio">{s.precio}</dd>
+                    </div>
+                  )}
+                </dl>
+              </div>
+            </article>
+          ))
+        }
+      </section>
+
+      <!-- ESCUCHADORES -->
+      <section class="escuchadores" id="escuchadores">
+        <h2>¿Tienes un hotel, una finca, una escuela o un espacio natural?</h2>
+        <p>
+          Con Escuchadores medimos y ponemos en valor la biodiversidad sonora de
+          tu espacio con sensores y análisis con IA. Somos socios tecnológicos
+          de Quiet Parks International en España.
+        </p>
+        <p>
+          El diagnóstico de paisaje sonoro incluye una visita, grabaciones en tu
+          entorno y un informe breve con las especies e indicadores que
+          detectamos.
+        </p>
+        <div class="acciones">
+          <a class="cta cta-claro" href={mailtoDiagnostico}>
+            Pedir presupuesto del diagnóstico
+          </a>
+          <a
+            class="cta cta-borde"
+            href="https://www.escuchadores.com/"
+            target="_blank"
+            rel="noopener"
+          >
+            Conocer Escuchadores
+          </a>
+        </div>
+      </section>
+
+      <!-- CÓMO TRABAJO -->
+      <section class="como" aria-labelledby="como-titulo">
+        <h2 id="como-titulo">Cómo trabajo</h2>
+        <ol class="pasos">
+          {
+            pasos.map((p) => (
+              <li>
+                <h3>{p.titulo}</h3>
+                <p>{p.texto}</p>
+              </li>
+            ))
+          }
+        </ol>
+      </section>
+
+      <!-- PROYECTOS RELACIONADOS -->
+      <section class="casos" aria-labelledby="casos-titulo">
+        <h2 id="casos-titulo">Proyectos relacionados</h2>
+        <ul>
+          {
+            casos.map((c) => (
+              <li>
+                <a href={c.url} target="_blank" rel="noopener">
+                  <span class="caso-titulo">{c.titulo}</span>
+                  <span class="caso-detalle">{c.detalle}</span>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+        <p class="nota">
+          Parte de mi trabajo no se expone públicamente. Puedo compartir más
+          información si me la pides.
+        </p>
+      </section>
+
+      <!-- CIERRE -->
+      <section class="cierre">
+        <h2>¿Hablamos?</h2>
+        <p>Cuéntame tu reto en una conversación de 30 minutos.</p>
+        <div class="acciones">
+          <a class="cta cta-primary" href={ctaUrl}>{ctaTexto}</a>
+          <a class="cta cta-secondary" href={mailto}>{email}</a>
+        </div>
+      </section>
+    </main>
+  </div>
+</Layout>
+
+<script>
+  const menu = document.getElementById("menu");
+  document
+    .getElementById("menuBtn")
+    ?.addEventListener("click", () => menu?.classList.add("open"));
+  document
+    .getElementById("closeBtn")
+    ?.addEventListener("click", () => menu?.classList.remove("open"));
+  menu
+    ?.querySelectorAll("a")
+    .forEach((a) =>
+      a.addEventListener("click", () => menu.classList.remove("open"))
+    );
+</script>
+
+<style>
+  .pagina {
+    --linea: rgba(8, 59, 34, 0.22);
+    max-width: 60rem;
+    margin: 0 auto;
+    padding-bottom: 3rem;
+  }
+
+  .pagina p,
+  .pagina li,
+  .pagina dd,
+  .pagina dt {
+    line-height: 1.55;
+  }
+
+  .pagina h2,
+  .pagina h3 {
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  /* ---------- Introducción ---------- */
+  .intro {
+    padding: 2.5rem 0 3.5rem;
+  }
+
+  .intro h1 {
+    font-size: clamp(2.1rem, 5.5vw, 3.4rem);
+    line-height: 1.1;
+    margin: 0 0 1.25rem;
+  }
+
+  .lede {
+    font-size: clamp(1.05rem, 2vw, 1.25rem);
+    max-width: 42rem;
+    margin: 0 0 1.75rem;
+  }
+
+  /* ---------- Servicios ---------- */
+  .servicio {
+    display: grid;
+    gap: 1.25rem 3rem;
+    padding: 2.5rem 0;
+    border-top: 1px solid var(--linea);
+  }
+
+  .servicio h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin: 0 0 0.75rem;
+  }
+
+  .para-quien {
+    margin: 0;
+    max-width: 30rem;
+    opacity: 0.85;
+  }
+
+  .servicio-cuerpo p {
+    margin: 0 0 1rem;
+    max-width: 38rem;
+  }
+
+  .incluye {
+    margin: 0 0 1.5rem;
+    padding-left: 1.1rem;
+    max-width: 38rem;
+  }
+
+  .incluye li {
+    margin-bottom: 0.35rem;
+  }
+
+  .meta {
+    display: grid;
+    gap: 0.9rem;
+    margin: 0;
+  }
+
+  .meta dt {
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-bottom: 0.15rem;
+  }
+
+  .meta dd {
+    margin: 0;
+  }
+
+  .meta .precio {
+    font-family: "Playfair Display", serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  @media (min-width: 800px) {
+    .servicio {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
+    }
+  }
+
+  /* ---------- Escuchadores (bloque destacado) ---------- */
+  .escuchadores {
+    margin: 2rem 0 4rem;
+    padding: clamp(1.75rem, 5vw, 3.5rem);
+    border-radius: 16px;
+    background: var(--color-strong);
+    color: #ffffff;
+  }
+
+  .escuchadores h2 {
+    font-size: clamp(1.6rem, 3.6vw, 2.4rem);
+    max-width: 26ch;
+    margin: 0 0 1.25rem;
+    color: #ffffff;
+  }
+
+  .escuchadores p {
+    max-width: 40rem;
+    margin: 0 0 1rem;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .escuchadores .acciones {
+    margin-top: 1.75rem;
+  }
+
+  /* ---------- Cómo trabajo ---------- */
+  .como {
+    padding: 0 0 4rem;
+  }
+
+  .como h2,
+  .casos h2,
+  .cierre h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin: 0 0 1.5rem;
+  }
+
+  .pasos {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 2rem;
+    counter-reset: paso;
+  }
+
+  .pasos li {
+    counter-increment: paso;
+    border-top: 1px solid var(--linea);
+    padding-top: 1rem;
+  }
+
+  .pasos li::before {
+    content: counter(paso);
+    display: block;
+    font-family: "Playfair Display", serif;
+    font-size: 2.4rem;
+    line-height: 1;
+    margin-bottom: 0.75rem;
+  }
+
+  .pasos h3 {
+    font-size: 1.15rem;
+    margin: 0 0 0.5rem;
+  }
+
+  .pasos p {
+    margin: 0;
+  }
+
+  @media (min-width: 800px) {
+    .pasos {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+    }
+  }
+
+  /* ---------- Proyectos relacionados ---------- */
+  .casos {
+    padding: 0 0 4rem;
+  }
+
+  .casos ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .casos li {
+    border-top: 1px solid var(--linea);
+  }
+
+  .casos li:last-child {
+    border-bottom: 1px solid var(--linea);
+  }
+
+  .casos a {
+    display: grid;
+    gap: 0.25rem 2rem;
+    padding: 1.1rem 0;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .caso-titulo {
+    font-family: "Playfair Display", serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  .casos a:hover .caso-titulo {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  .nota {
+    margin: 1rem 0 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+
+  @media (min-width: 800px) {
+    .casos a {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
+      align-items: baseline;
+    }
+  }
+
+  /* ---------- Cierre ---------- */
+  .cierre {
+    padding: 1rem 0 2rem;
+  }
+
+  .cierre p {
+    margin: 0 0 1.5rem;
+    font-size: 1.15rem;
+  }
+
+  /* ---------- Botones ---------- */
+  .acciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .cta {
+    display: inline-block;
+    padding: 14px 28px;
+    border: 1px solid var(--color-strong);
+    border-radius: var(--radius);
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+  }
+
+  .cta-primary {
+    background: var(--color-strong);
+    color: #ffffff;
+  }
+
+  .cta-primary:hover {
+    background: transparent;
+    color: var(--color-strong);
+  }
+
+  .cta-secondary {
+    background: transparent;
+    color: var(--color-strong);
+  }
+
+  .cta-secondary:hover {
+    background: var(--color-strong);
+    color: #ffffff;
+  }
+
+  .cta-claro {
+    background: #ffffff;
+    border-color: #ffffff;
+    color: var(--color-strong);
+  }
+
+  .cta-claro:hover {
+    background: transparent;
+    color: #ffffff;
+  }
+
+  .cta-borde {
+    background: transparent;
+    border-color: rgba(255, 255, 255, 0.7);
+    color: #ffffff;
+  }
+
+  .cta-borde:hover {
+    background: #ffffff;
+    color: var(--color-strong);
+  }
+
+  /* ---------- Accesibilidad ---------- */
+  .pagina a:focus-visible {
+    outline: 2px solid var(--color-strong);
+    outline-offset: 3px;
+  }
+
+  .escuchadores a:focus-visible {
+    outline-color: #ffffff;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .cta {
+      transition: none;
+    }
+  }
+</style>
